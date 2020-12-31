@@ -502,3 +502,56 @@ footer{
         stroke-dashoffset: 0;
     }
 }
+
+/******** Moving dots *********/
+.dots-moving{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    li{
+        list-style: none;
+        position: absolute;
+        &.first{
+            animation: myOrbit 4s linear infinite;
+            &:hover{
+                animation-play-state: paused;
+                span{
+                    animation-play-state: paused;
+                }
+            }
+        }
+        span{
+            background-color: #e14917;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%; 
+            transition: all .3s ease-in;
+            display: block;
+            animation: dotscale 4s ease-in infinite;
+        }  
+        &:hover{
+            .dt-content{
+                display: block;
+            }
+        }  
+        .dt-content{
+            display: none
+        }   
+    }
+}
+
+
+@keyframes myOrbit {
+    from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+@keyframes dotscale {
+    0% { width: 10px; height: 10px; }
+    100%   { width: 50px; height: 50px; }
+}
