@@ -121,9 +121,19 @@ header{
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url('../images/main-pattern.png');
-    background-size: cover;
+    background-image: url('../images/hero-img-mobile.png');
+    background-position: center center;
     background-repeat: no-repeat;
+    overflow: hidden;    
+    animation: animateherobg 2s ease-in infinite;
+    animation-direction: alternate;
+    h3,h1,a{
+        position: relative;
+        z-index: 3;
+    }
+    @media screen and (min-width: 768px){
+        background-image: url('../images/hero-img.png');        
+    }
 }
 .da-btn{
     @include boldfont();
@@ -509,20 +519,56 @@ footer{
     top: 0;
     left: 0;
     width: 100%;
+    padding-left: 0;
+    padding-top: 82px;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     li{
         list-style: none;
         position: absolute;
+        display: flex;
+        a{
+            text-decoration: none;
+            @include boldfont();
+            @include fluid-type($min_width, $max_width, 14px, 17px);
+            color: $text_color_dark;
+            h4{
+                color: $da_orange_color;
+                @include fluid-type($min_width, $max_width, 16px, 24px);
+            }
+        }
         &.first{
-            animation: myOrbit 4s linear infinite;
+            animation: firstdot 20s ease-in infinite;
+            animation-direction: alternate;
             &:hover{
                 animation-play-state: paused;
-                span{
-                    animation-play-state: paused;
-                }
+            }
+        }
+        &.second{
+            animation: seconddot 20s ease-in infinite;
+            animation-direction: alternate;
+            &:hover{
+                animation-play-state: paused;
+            }
+        }
+        &.third{
+            animation: thirdot 20s ease-in infinite;
+            animation-direction: alternate;
+            &:hover{
+                animation-play-state: paused;
+            }
+        }
+        &.fourth{
+            animation: fourthdot 20s ease-in infinite;
+            animation-direction: alternate;
+            &:hover{
+                animation-play-state: paused;
+            }
+        }
+        &.fifth{
+            animation: fifthdot 20s ease-in infinite;
+            animation-direction: alternate;
+            &:hover{
+                animation-play-state: paused;
             }
         }
         span{
@@ -532,23 +578,94 @@ footer{
             border-radius: 50%; 
             transition: all .3s ease-in;
             display: block;
-            animation: dotscale 4s ease-in infinite;
+            // animation: dotscale 4s ease-in infinite;
         }  
         &:hover{
-            .dt-content{
-                display: block;
-            }
+            @media screen and (min-width: 768px)
+            {
+                .dt-content{
+                    display: block;
+                }
+            }            
         }  
         .dt-content{
-            display: none
+            display: none;
         }   
     }
 }
 
+.menucnt{
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    background: url('../images/menubg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    overflow-y: hidden; // hide vertical
+    overflow-x: hidden; // hide horizontal
+    .close-menu-cnt{
+        color: $da_orange_color;
+        font-size: 38px;
+        width: 1.3em;
+        height: 1.3em;
+    }
+}
 
-@keyframes myOrbit {
-    from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+@keyframes animateherobg {
+    0% { 
+       background-size: 95%;
+    }
+    to { 
+        background-size: 100%;
+    }
+}
+
+@keyframes firstdot {
+    from { 
+       transform: translate(0px,0px) scale(1);
+    }
+    to { 
+       transform: translate(95vw,85vh) scale(1.5);
+    }
+}
+
+@keyframes seconddot {
+    from { 
+       transform: translate(95vw,85vh) scale(1.5);
+    }
+    to { 
+       transform: translate(0px,0px) scale(1);
+    }
+}
+
+@keyframes thirdot {
+    from { 
+       transform: translate(95vw,10vh) scale(1.5);
+    }
+    to { 
+       transform: translate(0px,90vh) scale(1);
+    }
+}
+
+@keyframes fourthdot {
+    from { 
+       transform: translate(50vw,50vh) scale(1.5);
+    }
+    to { 
+       transform: translate(50vw,10vh) scale(1);
+    }
+}
+
+@keyframes fifthdot {
+    from { 
+       transform: translate(50vw,50vh) scale(1.5);
+    }
+    to { 
+       transform: translate(95vw,50vh) scale(1);
+    }
 }
 
 @keyframes dotscale {

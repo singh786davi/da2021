@@ -91,9 +91,25 @@ header.fixed {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100vh;
-  background-image: url("../images/main-pattern.png");
-  background-size: cover;
+  background-image: url("../images/hero-img-mobile.png");
+  background-position: center center;
   background-repeat: no-repeat;
+  overflow: hidden;
+  -webkit-animation: animateherobg 2s ease-in infinite;
+          animation: animateherobg 2s ease-in infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.hero h3, .hero h1, .hero a {
+  position: relative;
+  z-index: 3;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: url("../images/hero-img.png");
+  }
 }
 
 .da-btn {
@@ -781,26 +797,68 @@ footer .footer-links li a:hover {
   top: 0;
   left: 0;
   width: 100%;
+  padding-left: 0;
+  padding-top: 82px;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .dots-moving li {
   list-style: none;
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dots-moving li a {
+  text-decoration: none;
+  font-family: 'ModeratB';
+  font-weight: bold;
+  font-style: normal;
+  color: #383838;
+}
+
+.dots-moving li a {
+  font-size: 14px;
+}
+
+@media screen and (min-width: 320px) {
+  .dots-moving li a {
+    font-size: calc(14px + 3 * ((100vw - 320px) / 880));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .dots-moving li a {
+    font-size: 17px;
+  }
+}
+
+.dots-moving li a h4 {
+  color: #e14917;
+}
+
+.dots-moving li a h4 {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 320px) {
+  .dots-moving li a h4 {
+    font-size: calc(16px + 8 * ((100vw - 320px) / 880));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .dots-moving li a h4 {
+    font-size: 24px;
+  }
 }
 
 .dots-moving li.first {
-  -webkit-animation: myOrbit 4s linear infinite;
-          animation: myOrbit 4s linear infinite;
+  -webkit-animation: firstdot 20s ease-in infinite;
+          animation: firstdot 20s ease-in infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 
 .dots-moving li.first:hover {
@@ -808,7 +866,50 @@ footer .footer-links li a:hover {
           animation-play-state: paused;
 }
 
-.dots-moving li.first:hover span {
+.dots-moving li.second {
+  -webkit-animation: seconddot 20s ease-in infinite;
+          animation: seconddot 20s ease-in infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.dots-moving li.second:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.dots-moving li.third {
+  -webkit-animation: thirdot 20s ease-in infinite;
+          animation: thirdot 20s ease-in infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.dots-moving li.third:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.dots-moving li.fourth {
+  -webkit-animation: fourthdot 20s ease-in infinite;
+          animation: fourthdot 20s ease-in infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.dots-moving li.fourth:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.dots-moving li.fifth {
+  -webkit-animation: fifthdot 20s ease-in infinite;
+          animation: fifthdot 20s ease-in infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.dots-moving li.fifth:hover {
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
 }
@@ -821,37 +922,164 @@ footer .footer-links li a:hover {
   -webkit-transition: all .3s ease-in;
   transition: all .3s ease-in;
   display: block;
-  -webkit-animation: dotscale 4s ease-in infinite;
-          animation: dotscale 4s ease-in infinite;
 }
 
-.dots-moving li:hover .dt-content {
-  display: block;
+@media screen and (min-width: 768px) {
+  .dots-moving li:hover .dt-content {
+    display: block;
+  }
 }
 
 .dots-moving li .dt-content {
   display: none;
 }
 
-@-webkit-keyframes myOrbit {
-  from {
-    -webkit-transform: rotate(0deg) translateX(150px) rotate(0deg);
-            transform: rotate(0deg) translateX(150px) rotate(0deg);
+.menucnt {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  background: url("../images/menubg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.menucnt .close-menu-cnt {
+  color: #e14917;
+  font-size: 38px;
+  width: 1.3em;
+  height: 1.3em;
+}
+
+@-webkit-keyframes animateherobg {
+  0% {
+    background-size: 95%;
   }
   to {
-    -webkit-transform: rotate(360deg) translateX(150px) rotate(-360deg);
-            transform: rotate(360deg) translateX(150px) rotate(-360deg);
+    background-size: 100%;
   }
 }
 
-@keyframes myOrbit {
-  from {
-    -webkit-transform: rotate(0deg) translateX(150px) rotate(0deg);
-            transform: rotate(0deg) translateX(150px) rotate(0deg);
+@keyframes animateherobg {
+  0% {
+    background-size: 95%;
   }
   to {
-    -webkit-transform: rotate(360deg) translateX(150px) rotate(-360deg);
-            transform: rotate(360deg) translateX(150px) rotate(-360deg);
+    background-size: 100%;
+  }
+}
+
+@-webkit-keyframes firstdot {
+  from {
+    -webkit-transform: translate(0px, 0px) scale(1);
+            transform: translate(0px, 0px) scale(1);
+  }
+  to {
+    -webkit-transform: translate(95vw, 85vh) scale(1.5);
+            transform: translate(95vw, 85vh) scale(1.5);
+  }
+}
+
+@keyframes firstdot {
+  from {
+    -webkit-transform: translate(0px, 0px) scale(1);
+            transform: translate(0px, 0px) scale(1);
+  }
+  to {
+    -webkit-transform: translate(95vw, 85vh) scale(1.5);
+            transform: translate(95vw, 85vh) scale(1.5);
+  }
+}
+
+@-webkit-keyframes seconddot {
+  from {
+    -webkit-transform: translate(95vw, 85vh) scale(1.5);
+            transform: translate(95vw, 85vh) scale(1.5);
+  }
+  to {
+    -webkit-transform: translate(0px, 0px) scale(1);
+            transform: translate(0px, 0px) scale(1);
+  }
+}
+
+@keyframes seconddot {
+  from {
+    -webkit-transform: translate(95vw, 85vh) scale(1.5);
+            transform: translate(95vw, 85vh) scale(1.5);
+  }
+  to {
+    -webkit-transform: translate(0px, 0px) scale(1);
+            transform: translate(0px, 0px) scale(1);
+  }
+}
+
+@-webkit-keyframes thirdot {
+  from {
+    -webkit-transform: translate(95vw, 10vh) scale(1.5);
+            transform: translate(95vw, 10vh) scale(1.5);
+  }
+  to {
+    -webkit-transform: translate(0px, 90vh) scale(1);
+            transform: translate(0px, 90vh) scale(1);
+  }
+}
+
+@keyframes thirdot {
+  from {
+    -webkit-transform: translate(95vw, 10vh) scale(1.5);
+            transform: translate(95vw, 10vh) scale(1.5);
+  }
+  to {
+    -webkit-transform: translate(0px, 90vh) scale(1);
+            transform: translate(0px, 90vh) scale(1);
+  }
+}
+
+@-webkit-keyframes fourthdot {
+  from {
+    -webkit-transform: translate(50vw, 50vh) scale(1.5);
+            transform: translate(50vw, 50vh) scale(1.5);
+  }
+  to {
+    -webkit-transform: translate(50vw, 10vh) scale(1);
+            transform: translate(50vw, 10vh) scale(1);
+  }
+}
+
+@keyframes fourthdot {
+  from {
+    -webkit-transform: translate(50vw, 50vh) scale(1.5);
+            transform: translate(50vw, 50vh) scale(1.5);
+  }
+  to {
+    -webkit-transform: translate(50vw, 10vh) scale(1);
+            transform: translate(50vw, 10vh) scale(1);
+  }
+}
+
+@-webkit-keyframes fifthdot {
+  from {
+    -webkit-transform: translate(50vw, 50vh) scale(1.5);
+            transform: translate(50vw, 50vh) scale(1.5);
+  }
+  to {
+    -webkit-transform: translate(95vw, 50vh) scale(1);
+            transform: translate(95vw, 50vh) scale(1);
+  }
+}
+
+@keyframes fifthdot {
+  from {
+    -webkit-transform: translate(50vw, 50vh) scale(1.5);
+            transform: translate(50vw, 50vh) scale(1.5);
+  }
+  to {
+    -webkit-transform: translate(95vw, 50vh) scale(1);
+            transform: translate(95vw, 50vh) scale(1);
   }
 }
 
