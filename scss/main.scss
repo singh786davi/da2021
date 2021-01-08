@@ -16,7 +16,24 @@ $very_light_gray: #bababa;
 @mixin btnshadowdark {
     box-shadow: 0px 3px 10px rgba($color: #000000, $alpha: 0.25);
 }
-
+@mixin linkbefore {
+    &:hover{
+        color: $da_orange_color;
+        &:before{
+            width: 100%;
+        }
+    }
+    &:before{
+        position: absolute;
+        bottom: -10px;
+        content: "";
+        left: 0;
+        width: 0%;
+        height: 1px;
+        background-color: $da_orange_color;
+        transition: width .3s ease;
+    }
+}
 @media (min-width: 1405px) {
     .container-fluid{
       width: 1400px;
@@ -381,18 +398,6 @@ header{
 .cslide{
     transition: all .5s ease-in;
     opacity: 1;
-	// position: absolute;
-	// left: 0px;
-	// top: 0px;
-	// width: 100%;
-	// height: 100%;
-	// opacity: 0;
-	// z-index: 1;
-
-	// -webkit-transition: opacity 1s;
-	// -moz-transition: opacity 1s;
-	// -o-transition: opacity 1s;
-	// transition: opacity 1s;
 }
 
 .showing{
@@ -576,14 +581,9 @@ footer{
             }
         }
         &.third{
-            // animation: thirdot 20s ease-in infinite;
-            // animation-direction: alternate;
             left: 40%;
             top:20%;
             transform: scale(1.5);
-            &:hover{
-                // animation-play-state: paused;
-            }
         }
         &.fourth{
             animation: fourthdot 20s ease-in infinite;
@@ -611,7 +611,6 @@ footer{
             border-radius: 50%; 
             transition: all .3s ease-in;
             display: block;
-            // animation: dotscale 4s ease-in infinite;
         }  
         &:hover{
             @media screen and (min-width: 768px)
@@ -683,6 +682,7 @@ footer{
                 }
             }
         }
+        
     }
     #search-da{
         label{
@@ -714,6 +714,43 @@ footer{
             transform: translate(0,-50%);
             color: #fff;
             @include fluid-type($min_width, $max_width, 30px, 40px);
+        }
+    }
+    .main-container-menu{
+        position: relative;
+        height: calc(100vh - 164px);
+        @media screen and (max-width: 575px)
+        {
+            overflow: scroll;
+        }
+        .service-menu-cnt
+        {
+            h4{
+                @include boldfont();
+                color: $da_orange_color;
+                @include fluid-type($min_width, $max_width, 18px, 22px)
+            }
+            @media screen and (min-width: 576px)
+            {
+                position: absolute;    
+                bottom: 0;
+                width: 100%;
+            }
+        }
+        .service-links{
+            padding-left: 0;
+            li{
+                list-style: none;
+                margin-bottom: 15px;
+                a{
+                    @include normalfont();
+                    text-decoration: none;
+                    @include fluid-type($min_width, $max_width, 16px, 18px);
+                    color: #fff;
+                    position: relative;
+                    @include linkbefore();
+                }
+            }
         }
     }
 }

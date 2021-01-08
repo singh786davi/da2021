@@ -25,29 +25,59 @@
               </a>
           </nav>
         </div>
-        <div class="row mt-5 align-items-md-end">
-          <div class="col-md-4 text-center text-md-end order-md-2">
-            <ul class="main-menu">
-              <li class="main-menu-item"><a href="#">Home</a></li>
-              <li class="main-menu-item"><a href="#">About Us</a></li>
-              <li class="main-menu-item"><a href="#">Our Work</a></li>
-              <li class="main-menu-item"><a href="#">Case Studies</a></li>
-              <li class="main-menu-item"><a href="#">Blog</a></li>
-              <li class="main-menu-item"><a href="#">Contact Us</a></li>
-            </ul>
+        <div class="main-container-menu">
+          <div class="row mt-5 align-items-md-end">
+            <div class="col-md-4 text-center text-md-end order-md-2">
+              <ul class="main-menu">
+                <li class="main-menu-item"><a href="#">Home</a></li>
+                <li class="main-menu-item"><a href="#">About Us</a></li>
+                <li class="main-menu-item"><a href="#">Our Work</a></li>
+                <li class="main-menu-item"><a href="#">Case Studies</a></li>
+                <li class="main-menu-item"><a href="#">Blog</a></li>
+                <li class="main-menu-item"><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="col-md-8 order-md-1">
+              <form action="" id="search-da">
+                <div class="mb-3">
+                  <label for="search" class="form-label">Search</label>
+                  <div class="searchcnt">
+                    <input type="text" name="s" class="form-control" id="" value="Search" onfocus="this.value == 'Search' ? this.value = '' : this.value == this.value" onblur="this.value == '' ? this.value = 'Search' : this.value = this.value">
+                    <a href="#" onclick="document.getElementById('search-da').submit();"><span class="iconify" data-icon="bi:search" data-inline="false"></span></a>
+                  </div>                
+                </div>
+              </form>
+            </div>          
           </div>
-          <div class="col-md-8 order-md-1">
-            <form action="" id="search-da">
-              <div class="mb-3">
-                <label for="search" class="form-label">Search</label>
-                <div class="searchcnt">
-                  <input type="text" name="s" class="form-control" id="" value="Search" onfocus="this.value == 'Search' ? this.value = '' : this.value == this.value" onblur="this.value == '' ? this.value = 'Search' : this.value = this.value">
-                  <a href="#" onclick="document.getElementById('search-da').submit();"><span class="iconify" data-icon="bi:search" data-inline="false"></span></a>
-                </div>                
+          <div class="row mt-5 service-menu-cnt">
+            <div class="col-12 col-lg-8">
+              <div class="row">
+                <div class="col-md-4 mb-4 text-center text-md-start">
+                  <h4 class="mb-3 mb-md-4">Web Design</h4>
+                  <ul class="service-links">
+                    <li><a href="#">Web Design & Development</a></li>
+                    <li><a href="#">Web Design & Development</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-4 mb-4 text-center text-md-start">
+                  <h4 class="mb-3 mb-md-4">Digital Marketing</h4>
+                  <ul class="service-links">
+                    <li><a href="#">Google Advertising</a></li>
+                    <li><a href="#">Social Media Advertising</a></li>
+                    <li><a href="#">Social Media Management</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-4 mb-4 text-center text-md-start">
+                  <h4 class="mb-3 mb-md-4">Web Design</h4>
+                  <ul class="service-links">
+                    <li><a href="#">Cloud Hosting</a></li>
+                    <li><a href="#">IT Managed Services</a></li>
+                  </ul>
+                </div>
               </div>
-            </form>
-          </div>          
-        </div>
+            </div>
+          </div>
+        </div>        
       </div>
     </div>
     <header class="site-header" id="site-header">
