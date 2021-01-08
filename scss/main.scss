@@ -125,8 +125,6 @@ header{
     background-position: center center;
     background-repeat: no-repeat;
     overflow: hidden;    
-    animation: animateherobg 2s ease-in infinite;
-    animation-direction: alternate;
     h3,h1,a{
         position: relative;
         z-index: 3;
@@ -180,25 +178,38 @@ header{
         top: 0;
         #orangepath {
             stroke: $da_orange_color;
-            stroke-width: 2px;
+            stroke-width: .75px;
             stroke-linecap: round;
             fill: none;
             stroke-dasharray: 454;
-            animation: wave 1.5s ease-in forwards, float 5s ease-in infinite;
+            &.is-visible{
+                animation: wave 1.5s ease-in forwards;    
+            }
         }
         #graypath{
             stroke: #797979;
-            stroke-width: 2px;
+            stroke-width: .75px;
             stroke-linecap: round;
             fill: none;
             stroke-dasharray: 454;
-            animation: wave 1.5s ease-in forwards, float 5s ease-in infinite;
+            &.is-visible{
+                animation: wave 1.5s ease-in forwards;    
+            }
         }
         @media screen and (min-width: 768px){
             display: block;
         }
     }    
     
+}
+.show-on-scroll{
+    opacity: 0;
+    transition: opacity .5s ease, transform .5s ease;
+    transform: translateY(25px);
+    &.is-visible{
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 .da-card{
     border-radius: 30px;
@@ -238,29 +249,29 @@ header{
             }
         }
     }
-}
-.solutions-to-grow h5{
-    @include boldfont();
-    @include fluid-type($min_width, $max_width, 32px, 50px);
-    color: #fff;
-}
-.solutions-to-grow .lower-curve,
-.solutions-to-grow .upper-curve{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    z-index: 1;
-}
-.solutions-to-grow .upper-curve{
-    bottom: auto;
-    top: 0%;
+    h5{
+        @include boldfont();
+        @include fluid-type($min_width, $max_width, 32px, 50px);
+        color: #fff;
+    }
+    .lower-curve,
+    .upper-curve{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        z-index: 1;
+    }
+    .upper-curve{
+        bottom: auto;
+        top: 0%;
+    }
+    .container-fluid{
+        z-index: 2;
+        position: relative;
+    }
 }
 .btn-dark-shadow{
     @include btnshadowdark()
-}
-.solutions-to-grow .container-fluid{
-    z-index: 2;
-    position: relative;
 }
 
 /**** Timeline ****/
@@ -496,8 +507,22 @@ footer{
                 color: $text_color;
                 text-decoration: none;
                 @include fluid-type($min_width, $max_width, 13px, 15px);
+                position: relative;
+                &:before{
+                    width: 0%;
+                    left: 0;
+                    height: 1px;
+                    bottom: -10px;
+                    position: absolute;
+                    background-color: $da_orange_color;
+                    transition: width .3s ease;
+                    content: "";
+                }
                 &:hover{
                     color: $da_orange_color;
+                    &:before{
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -551,10 +576,13 @@ footer{
             }
         }
         &.third{
-            animation: thirdot 20s ease-in infinite;
-            animation-direction: alternate;
+            // animation: thirdot 20s ease-in infinite;
+            // animation-direction: alternate;
+            left: 40%;
+            top:20%;
+            transform: scale(1.5);
             &:hover{
-                animation-play-state: paused;
+                // animation-play-state: paused;
             }
         }
         &.fourth{
@@ -570,6 +598,11 @@ footer{
             &:hover{
                 animation-play-state: paused;
             }
+        }
+        &.sixth{
+            left: 65%;
+            top:20%;
+            transform: scale(1.5);
         }
         span{
             background-color: #e14917;
@@ -597,7 +630,7 @@ footer{
 .menucnt{
     position: fixed;
     z-index: 100;
-    left: 0;
+    left: -100%;
     top: 0;
     height: 100vh;
     background: url('../images/menubg.jpg');
@@ -606,11 +639,82 @@ footer{
     width: 100%;
     overflow-y: hidden; // hide vertical
     overflow-x: hidden; // hide horizontal
+    transition: left .3s ease;
+    &.open{
+        left: 0%;
+        .close-menu-cnt{
+            opacity: 1;
+            transition: opacity .1s ease;
+        }
+    }
     .close-menu-cnt{
         color: $da_orange_color;
         font-size: 38px;
-        width: 1.3em;
-        height: 1.3em;
+        opacity: 0;
+        transition: opacity .3s ease .3s;
+    }
+    .main-menu{
+        padding-left: 0;
+        li{
+            list-style: none;
+            margin-bottom: 15px;
+            a{
+                @include boldfont();
+                @include fluid-type($min_width, $max_width, 17px, 22px);
+                color: #fff;
+                text-decoration: none;
+                letter-spacing: .1rem;
+                position: relative;
+                &:before{
+                    width: 0%;
+                    content: "";
+                    height: 1px;
+                    background-color: $da_orange_color;
+                    position: absolute;
+                    bottom: -10px;
+                    left: 0;
+                    transition: width .3s ease;
+                }
+                &:hover{
+                    color: $da_orange_color;
+                    &:before{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    #search-da{
+        label{
+            @include boldfont();
+            color: #fff;
+            @include fluid-type($min_width, $max_width, 18px, 22px);
+        }
+        input{
+            background-color: transparent;
+            color: #fff;
+            padding: 20px 25px;
+            border: none;
+            border-bottom: 2px solid #fff;
+            border-radius: 0px;
+            @include normalfont();
+            @include fluid-type($min_width, $max_width, 30px, 50px);
+            &:focus{
+                outline: none;
+                box-shadow: none;
+            }
+        }
+    }
+    .searchcnt{
+        position: relative;
+        a{
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translate(0,-50%);
+            color: #fff;
+            @include fluid-type($min_width, $max_width, 30px, 40px);
+        }
     }
 }
 
