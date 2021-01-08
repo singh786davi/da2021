@@ -39,15 +39,8 @@ h2 {
 .navbar-toggler:focus,
 .navbar-toggler:active {
   outline: 0;
-}
-
-/* hide close when burger shown */
-.navbar-toggler.collapsed .close-icon {
-  display: none;
-}
-
-.navbar-toggler:not(.collapsed) .navbar-toggler-icon {
-  display: inline;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .custom-toggler .navbar-toggler-icon {
@@ -997,6 +990,24 @@ footer .footer-links li a:hover:before {
   transition: opacity .1s ease;
 }
 
+.menucnt.open #search-da {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+.menucnt.open .main-container-menu .main-menu li {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+.menucnt.open .main-container-menu .service-links li {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
 .menucnt .close-menu-cnt {
   color: #e14917;
   font-size: 38px;
@@ -1009,9 +1020,61 @@ footer .footer-links li a:hover:before {
   padding-left: 0;
 }
 
+.menucnt .main-menu li:nth-of-type(1) {
+  -webkit-transition: opacity 0.3s 0.3s, -webkit-transform 0.3s 0.3s;
+  transition: opacity 0.3s 0.3s, -webkit-transform 0.3s 0.3s;
+  transition: opacity 0.3s 0.3s, transform 0.3s 0.3s;
+  transition: opacity 0.3s 0.3s, transform 0.3s 0.3s, -webkit-transform 0.3s 0.3s;
+}
+
+.menucnt .main-menu li:nth-of-type(2) {
+  -webkit-transition: opacity 0.3s 0.4s, -webkit-transform 0.3s 0.4s;
+  transition: opacity 0.3s 0.4s, -webkit-transform 0.3s 0.4s;
+  transition: opacity 0.3s 0.4s, transform 0.3s 0.4s;
+  transition: opacity 0.3s 0.4s, transform 0.3s 0.4s, -webkit-transform 0.3s 0.4s;
+}
+
+.menucnt .main-menu li:nth-of-type(3) {
+  -webkit-transition: opacity 0.3s 0.5s, -webkit-transform 0.3s 0.5s;
+  transition: opacity 0.3s 0.5s, -webkit-transform 0.3s 0.5s;
+  transition: opacity 0.3s 0.5s, transform 0.3s 0.5s;
+  transition: opacity 0.3s 0.5s, transform 0.3s 0.5s, -webkit-transform 0.3s 0.5s;
+}
+
+.menucnt .main-menu li:nth-of-type(4) {
+  -webkit-transition: opacity 0.3s 0.6s, -webkit-transform 0.3s 0.6s;
+  transition: opacity 0.3s 0.6s, -webkit-transform 0.3s 0.6s;
+  transition: opacity 0.3s 0.6s, transform 0.3s 0.6s;
+  transition: opacity 0.3s 0.6s, transform 0.3s 0.6s, -webkit-transform 0.3s 0.6s;
+}
+
+.menucnt .main-menu li:nth-of-type(5) {
+  -webkit-transition: opacity 0.3s 0.7s, -webkit-transform 0.3s 0.7s;
+  transition: opacity 0.3s 0.7s, -webkit-transform 0.3s 0.7s;
+  transition: opacity 0.3s 0.7s, transform 0.3s 0.7s;
+  transition: opacity 0.3s 0.7s, transform 0.3s 0.7s, -webkit-transform 0.3s 0.7s;
+}
+
+.menucnt .main-menu li:nth-of-type(6) {
+  -webkit-transition: opacity 0.3s 0.8s, -webkit-transform 0.3s 0.8s;
+  transition: opacity 0.3s 0.8s, -webkit-transform 0.3s 0.8s;
+  transition: opacity 0.3s 0.8s, transform 0.3s 0.8s;
+  transition: opacity 0.3s 0.8s, transform 0.3s 0.8s, -webkit-transform 0.3s 0.8s;
+}
+
+.menucnt .main-menu li:nth-of-type(7) {
+  -webkit-transition: opacity 0.3s 0.9s, -webkit-transform 0.3s 0.9s;
+  transition: opacity 0.3s 0.9s, -webkit-transform 0.3s 0.9s;
+  transition: opacity 0.3s 0.9s, transform 0.3s 0.9s;
+  transition: opacity 0.3s 0.9s, transform 0.3s 0.9s, -webkit-transform 0.3s 0.9s;
+}
+
 .menucnt .main-menu li {
   list-style: none;
   margin-bottom: 15px;
+  opacity: 0;
+  -webkit-transform: translateY(25px);
+          transform: translateY(25px);
 }
 
 .menucnt .main-menu li a {
@@ -1058,6 +1121,16 @@ footer .footer-links li a:hover:before {
 
 .menucnt .main-menu li a:hover:before {
   width: 100%;
+}
+
+.menucnt #search-da {
+  opacity: 0;
+  -webkit-transform: translateY(25px);
+          transform: translateY(25px);
+  -webkit-transition: opacity 0.3s ease 0.9s, -webkit-transform 0.3s ease 0.9s;
+  transition: opacity 0.3s ease 0.9s, -webkit-transform 0.3s ease 0.9s;
+  transition: opacity 0.3s ease 0.9s, transform 0.3s ease 0.9s;
+  transition: opacity 0.3s ease 0.9s, transform 0.3s ease 0.9s, -webkit-transform 0.3s ease 0.9s;
 }
 
 .menucnt #search-da label {
@@ -1153,7 +1226,8 @@ footer .footer-links li a:hover:before {
 
 @media screen and (max-width: 575px) {
   .menucnt .main-container-menu {
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
 }
 
@@ -1192,7 +1266,52 @@ footer .footer-links li a:hover:before {
   padding-left: 0;
 }
 
+.menucnt .main-container-menu .service-links li:nth-of-type(1) {
+  -webkit-transition: opacity 0.3s 0.3s, -webkit-transform 0.3s 0.3s;
+  transition: opacity 0.3s 0.3s, -webkit-transform 0.3s 0.3s;
+  transition: opacity 0.3s 0.3s, transform 0.3s 0.3s;
+  transition: opacity 0.3s 0.3s, transform 0.3s 0.3s, -webkit-transform 0.3s 0.3s;
+}
+
+.menucnt .main-container-menu .service-links li:nth-of-type(2) {
+  -webkit-transition: opacity 0.3s 0.4s, -webkit-transform 0.3s 0.4s;
+  transition: opacity 0.3s 0.4s, -webkit-transform 0.3s 0.4s;
+  transition: opacity 0.3s 0.4s, transform 0.3s 0.4s;
+  transition: opacity 0.3s 0.4s, transform 0.3s 0.4s, -webkit-transform 0.3s 0.4s;
+}
+
+.menucnt .main-container-menu .service-links li:nth-of-type(3) {
+  -webkit-transition: opacity 0.3s 0.5s, -webkit-transform 0.3s 0.5s;
+  transition: opacity 0.3s 0.5s, -webkit-transform 0.3s 0.5s;
+  transition: opacity 0.3s 0.5s, transform 0.3s 0.5s;
+  transition: opacity 0.3s 0.5s, transform 0.3s 0.5s, -webkit-transform 0.3s 0.5s;
+}
+
+.menucnt .main-container-menu .service-links li:nth-of-type(4) {
+  -webkit-transition: opacity 0.3s 0.6s, -webkit-transform 0.3s 0.6s;
+  transition: opacity 0.3s 0.6s, -webkit-transform 0.3s 0.6s;
+  transition: opacity 0.3s 0.6s, transform 0.3s 0.6s;
+  transition: opacity 0.3s 0.6s, transform 0.3s 0.6s, -webkit-transform 0.3s 0.6s;
+}
+
+.menucnt .main-container-menu .service-links li:nth-of-type(5) {
+  -webkit-transition: opacity 0.3s 0.7s, -webkit-transform 0.3s 0.7s;
+  transition: opacity 0.3s 0.7s, -webkit-transform 0.3s 0.7s;
+  transition: opacity 0.3s 0.7s, transform 0.3s 0.7s;
+  transition: opacity 0.3s 0.7s, transform 0.3s 0.7s, -webkit-transform 0.3s 0.7s;
+}
+
+.menucnt .main-container-menu .service-links li:nth-of-type(6) {
+  -webkit-transition: opacity 0.3s 0.8s, -webkit-transform 0.3s 0.8s;
+  transition: opacity 0.3s 0.8s, -webkit-transform 0.3s 0.8s;
+  transition: opacity 0.3s 0.8s, transform 0.3s 0.8s;
+  transition: opacity 0.3s 0.8s, transform 0.3s 0.8s, -webkit-transform 0.3s 0.8s;
+}
+
 .menucnt .main-container-menu .service-links li {
+  opacity: 0;
+  -webkit-transform: translateY(25px);
+          transform: translateY(25px);
   list-style: none;
   margin-bottom: 15px;
 }

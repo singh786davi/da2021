@@ -16,6 +16,18 @@ $very_light_gray: #bababa;
 @mixin btnshadowdark {
     box-shadow: 0px 3px 10px rgba($color: #000000, $alpha: 0.25);
 }
+@mixin nthChildNav($item, $count) {
+    $a-delay: 0.3s;
+    $a-duration: 0.3s;
+
+    @for $i from 1 through $count {
+        #{$item}:nth-of-type(#{$i}) {
+            transition: opacity $a-duration ($a-delay + ($i - 1) * 0.1), transform $a-duration ($a-delay + ($i - 1) * 0.1);
+        }
+        // @debug $i;
+    }
+}
+
 @mixin linkbefore {
     &:hover{
         color: $da_orange_color;
@@ -97,16 +109,9 @@ h2{
 .navbar-toggler:focus,
 .navbar-toggler:active {
     outline: 0;
+    box-shadow: none;
 }
 
-/* hide close when burger shown */
-.navbar-toggler.collapsed .close-icon {
-    display: none;
-}
-
-.navbar-toggler:not(.collapsed) .navbar-toggler-icon {
-    display: inline;
-}
 .custom-toggler .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(225, 73, 23, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
@@ -645,6 +650,26 @@ footer{
             opacity: 1;
             transition: opacity .1s ease;
         }
+        #search-da{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+        .main-container-menu
+        {
+            .main-menu
+            {
+                li{
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+            }
+            .service-links{
+                li{
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+            }
+        }
     }
     .close-menu-cnt{
         color: $da_orange_color;
@@ -654,16 +679,19 @@ footer{
     }
     .main-menu{
         padding-left: 0;
+        @include nthChildNav(li,7);
         li{
             list-style: none;
             margin-bottom: 15px;
+            opacity: 0;
+            transform: translateY(25px);
             a{
                 @include boldfont();
                 @include fluid-type($min_width, $max_width, 17px, 22px);
                 color: #fff;
                 text-decoration: none;
                 letter-spacing: .1rem;
-                position: relative;
+                position: relative;                
                 &:before{
                     width: 0%;
                     content: "";
@@ -685,6 +713,9 @@ footer{
         
     }
     #search-da{
+        opacity: 0;
+        transform: translateY(25px);
+        transition: opacity 0.3s ease 0.9s, transform 0.3s ease 0.9s;
         label{
             @include boldfont();
             color: #fff;
@@ -721,7 +752,8 @@ footer{
         height: calc(100vh - 164px);
         @media screen and (max-width: 575px)
         {
-            overflow: scroll;
+            overflow-y: scroll;
+            overflow-x: hidden;
         }
         .service-menu-cnt
         {
@@ -739,7 +771,10 @@ footer{
         }
         .service-links{
             padding-left: 0;
+            @include nthChildNav(li, 6);
             li{
+                opacity: 0;
+                transform: translateY(25px);
                 list-style: none;
                 margin-bottom: 15px;
                 a{
