@@ -1,7 +1,10 @@
 .about-sec-hero{
-    padding: 150px 0px 60px 0px;
+    padding: 150px 0px 0px 0px;
     position: relative;
     overflow: hidden;
+    @media screen and (min-width:768px){
+        padding: 150px 0px 60px 0px;
+    }
     h1{
         @include boldfont();
         @include fluid-type($min_width,$max_width,28px,48px);
@@ -52,10 +55,10 @@
     .about-da-team-image{
         position: absolute;
         right: 0;
-        top: 50%;
+        top: 60%;
         width: 539px;
         height: 607px;
-        transform: translate(0,-50%);
+        transform: translate(0,-60%);
         z-index: 2;
         background: url(../images/da-team.png);
         background-position: right;
@@ -64,5 +67,99 @@
         @media screen and (min-width: 992px){
             display: block;
         }
+    }
+}
+
+.our-values
+{
+    padding-bottom: 200px;
+    .valuerow{
+        margin-top: 100px;
+        @media screen and (min-width: 768px){
+            margin-top: 160px;
+        }
+    }
+    h3{
+        @include boldfont();
+        color: $dark_h3_color;
+        @include fluid-type($min_width,$max_width,18px,22px);
+    }
+    
+}
+
+.valuethumb{
+    position: relative;
+    &:before{
+        background-color: $capsule_color;
+        position: absolute;
+        width: 50px;
+        height: 132px;
+        border-radius: 30px;
+        transform: translate(-50%,-50%) rotate(25deg);
+        content: "";
+        top: 50%;
+        left: 50%;
+    }
+    &.gray{
+        &:before{
+            background-color: $capsule_color_gray;
+        }
+    }
+    img{
+        width: 75px;
+        height: 75px;
+        position: relative;
+        z-index: 1;            
+    }
+}
+.our-approach {
+    position: relative;
+    background-color: #fcfcfc;
+    margin-bottom: 100px;
+    .approach-bg-top{
+        position: absolute;
+        top: -100px;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        svg{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .approach-bg-bottom{
+        position: absolute;
+        bottom: -100px;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        svg{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    p{
+        @include fluid-type($min_width,$max_width,16px,18px);
+    }
+}
+
+.team-member{
+    &:hover{
+        cursor: pointer;
+        .member-thumb{
+            background-image: url(../images/svgs/team-hover-bg.svg);
+            background-size: 305px 293px;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+    }
+    h6{
+        color: $da_orange_color;
+        @include boldfont();
+        @include fluid-type($min_width,$max_width,18px,22px);
+    }
+    h4{
+        @include fluid-type($min_width,$max_width,24px,28px);
+        @include boldfont();
     }
 }

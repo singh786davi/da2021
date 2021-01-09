@@ -1,4 +1,111 @@
 @import url(../css/fonts.css);
+@-webkit-keyframes wave {
+  0% {
+    stroke-dashoffset: 454;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes wave {
+  0% {
+    stroke-dashoffset: 454;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes titlewavedown {
+  0% {
+    stroke-dashoffset: -280;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes titlewavedown {
+  0% {
+    stroke-dashoffset: -280;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes titlewaveup {
+  0% {
+    stroke-dashoffset: -253;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes titlewaveup {
+  0% {
+    stroke-dashoffset: -253;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes footwire {
+  0% {
+    stroke-dashoffset: -780;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes footwire {
+  0% {
+    stroke-dashoffset: -780;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes secwavegray {
+  0% {
+    stroke-dashoffset: -908;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes secwavegray {
+  0% {
+    stroke-dashoffset: -908;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes secwaveorange {
+  0% {
+    stroke-dashoffset: -632;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes secwaveorange {
+  0% {
+    stroke-dashoffset: -632;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
 @-webkit-keyframes animateherobg {
   0% {
     background-size: 95%;
@@ -7,6 +114,7 @@
     background-size: 100%;
   }
 }
+
 @keyframes animateherobg {
   0% {
     background-size: 95%;
@@ -184,6 +292,128 @@ h2 {
   font-style: normal;
 }
 
+.sec-title {
+  position: relative;
+  padding-bottom: 20px;
+  font-family: 'ModeratB';
+  font-weight: bold;
+  font-style: normal;
+  color: #e14917;
+}
+
+.sec-title {
+  font-size: 28px;
+}
+
+@media screen and (min-width: 320px) {
+  .sec-title {
+    font-size: calc(28px + 7 * ((100vw - 320px) / 880));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .sec-title {
+    font-size: 35px;
+  }
+}
+
+.sec-title.center .title-waves {
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.sec-title.left .title-waves {
+  left: 0;
+}
+
+.sec-title .title-waves {
+  position: absolute;
+  bottom: -30px;
+  width: 250px;
+  height: 30px;
+}
+
+.sec-title .title-waves svg {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.sec-title .title-waves svg:first-child {
+  z-index: 1;
+  stroke-dasharray: 280;
+}
+
+.sec-title .title-waves svg:first-child.is-visible {
+  -webkit-animation: titlewavedown 1.5s ease-in forwards;
+          animation: titlewavedown 1.5s ease-in forwards;
+}
+
+.sec-title .title-waves svg:last-child {
+  z-index: 2;
+  stroke-dasharray: 253;
+}
+
+.sec-title .title-waves svg:last-child.is-visible {
+  -webkit-animation: titlewaveup 1.5s ease-in forwards;
+          animation: titlewaveup 1.5s ease-in forwards;
+}
+
+.section-waves {
+  position: absolute;
+  width: 55%;
+}
+
+.section-waves.bottom {
+  bottom: 0;
+}
+
+.section-waves.right {
+  right: 0;
+}
+
+.section-waves.right svg {
+  right: 0;
+}
+
+.section-waves.top {
+  top: 0;
+}
+
+.section-waves.left {
+  left: 0;
+}
+
+.section-waves.left svg {
+  left: 0;
+}
+
+.section-waves svg {
+  position: absolute;
+  top: 0;
+}
+
+.section-waves svg.graywave {
+  stroke-dasharray: 908;
+}
+
+.section-waves svg.graywave.is-visible {
+  -webkit-animation: secwavegray 2s ease-in forwards;
+          animation: secwavegray 2s ease-in forwards;
+}
+
+.section-waves svg.orangewave {
+  stroke-dasharray: 632;
+}
+
+.section-waves svg.orangewave.is-visible {
+  -webkit-animation: secwaveorange 2s ease-in forwards;
+          animation: secwaveorange 2s ease-in forwards;
+}
+
 /* ditch the ugle blue outline */
 .navbar-toggler:focus,
 .navbar-toggler:active {
@@ -306,7 +536,7 @@ header.fixed {
 
 @media screen and (min-width: 768px) {
   .sec-padding {
-    padding: 90px 0;
+    padding-top: 90px 0;
   }
 }
 
@@ -851,7 +1081,7 @@ header.fixed {
 .da-cta .footer-curve {
   position: absolute;
   width: 100%;
-  height: 120%;
+  height: 200px;
   bottom: 0;
   left: 0;
   z-index: 1;
@@ -860,6 +1090,24 @@ header.fixed {
 .da-cta .container {
   position: relative;
   z-index: 2;
+}
+
+.da-cta .footer-wire {
+  position: absolute;
+  right: 0;
+  top: -40px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.da-cta .footer-wire #footwire {
+  stroke-dasharray: 780;
+}
+
+.da-cta .footer-wire #footwire.is-visible {
+  -webkit-animation: footwire 2s ease-in forwards;
+          animation: footwire 2s ease-in forwards;
 }
 
 footer {
@@ -948,24 +1196,6 @@ footer .footer-links li a:hover {
 
 footer .footer-links li a:hover:before {
   width: 100%;
-}
-
-@-webkit-keyframes wave {
-  0% {
-    stroke-dashoffset: 454;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes wave {
-  0% {
-    stroke-dashoffset: 454;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
 }
 
 /******** Moving dots *********/
@@ -1512,9 +1742,15 @@ footer .footer-links li a:hover:before {
 
 /****** About page  ****/
 .about-sec-hero {
-  padding: 150px 0px 60px 0px;
+  padding: 150px 0px 0px 0px;
   position: relative;
   overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .about-sec-hero {
+    padding: 150px 0px 60px 0px;
+  }
 }
 
 .about-sec-hero h1 {
@@ -1657,11 +1893,11 @@ footer .footer-links li a:hover:before {
 .about-sec-hero .about-da-team-image {
   position: absolute;
   right: 0;
-  top: 50%;
+  top: 60%;
   width: 539px;
   height: 607px;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  -webkit-transform: translate(0, -60%);
+          transform: translate(0, -60%);
   z-index: 2;
   background: url(../images/da-team.png);
   background-position: right;
@@ -1672,6 +1908,175 @@ footer .footer-links li a:hover:before {
 @media screen and (min-width: 992px) {
   .about-sec-hero .about-da-team-image {
     display: block;
+  }
+}
+
+.our-values {
+  padding-bottom: 200px;
+}
+
+.our-values .valuerow {
+  margin-top: 100px;
+}
+
+@media screen and (min-width: 768px) {
+  .our-values .valuerow {
+    margin-top: 160px;
+  }
+}
+
+.our-values h3 {
+  font-family: 'ModeratB';
+  font-weight: bold;
+  font-style: normal;
+  color: #797979;
+}
+
+.our-values h3 {
+  font-size: 18px;
+}
+
+@media screen and (min-width: 320px) {
+  .our-values h3 {
+    font-size: calc(18px + 4 * ((100vw - 320px) / 880));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .our-values h3 {
+    font-size: 22px;
+  }
+}
+
+.valuethumb {
+  position: relative;
+}
+
+.valuethumb:before {
+  background-color: #FCE9E3;
+  position: absolute;
+  width: 50px;
+  height: 132px;
+  border-radius: 30px;
+  -webkit-transform: translate(-50%, -50%) rotate(25deg);
+          transform: translate(-50%, -50%) rotate(25deg);
+  content: "";
+  top: 50%;
+  left: 50%;
+}
+
+.valuethumb.gray:before {
+  background-color: #efefef;
+}
+
+.valuethumb img {
+  width: 75px;
+  height: 75px;
+  position: relative;
+  z-index: 1;
+}
+
+.our-approach {
+  position: relative;
+  background-color: #fcfcfc;
+  margin-bottom: 100px;
+}
+
+.our-approach .approach-bg-top {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+}
+
+.our-approach .approach-bg-top svg {
+  width: 100%;
+  height: 100%;
+}
+
+.our-approach .approach-bg-bottom {
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+}
+
+.our-approach .approach-bg-bottom svg {
+  width: 100%;
+  height: 100%;
+}
+
+.our-approach p {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 320px) {
+  .our-approach p {
+    font-size: calc(16px + 2 * ((100vw - 320px) / 880));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .our-approach p {
+    font-size: 18px;
+  }
+}
+
+.team-member:hover {
+  cursor: pointer;
+}
+
+.team-member:hover .member-thumb {
+  background-image: url(../images/svgs/team-hover-bg.svg);
+  background-size: 305px 293px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.team-member h6 {
+  color: #e14917;
+  font-family: 'ModeratB';
+  font-weight: bold;
+  font-style: normal;
+}
+
+.team-member h6 {
+  font-size: 18px;
+}
+
+@media screen and (min-width: 320px) {
+  .team-member h6 {
+    font-size: calc(18px + 4 * ((100vw - 320px) / 880));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-member h6 {
+    font-size: 22px;
+  }
+}
+
+.team-member h4 {
+  font-family: 'ModeratB';
+  font-weight: bold;
+  font-style: normal;
+}
+
+.team-member h4 {
+  font-size: 24px;
+}
+
+@media screen and (min-width: 320px) {
+  .team-member h4 {
+    font-size: calc(24px + 4 * ((100vw - 320px) / 880));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-member h4 {
+    font-size: 28px;
   }
 }
 /*# sourceMappingURL=main.css.map */

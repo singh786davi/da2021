@@ -1,3 +1,57 @@
+@keyframes wave{
+   0%{
+       stroke-dashoffset: 454;
+   }
+   100%{
+       stroke-dashoffset: 0;
+   }
+}
+
+@keyframes titlewavedown{
+   0%{
+       stroke-dashoffset: -280;
+   }
+   100%{
+       stroke-dashoffset: 0;
+   }
+}
+
+@keyframes titlewaveup{
+   0%{
+       stroke-dashoffset: -253;
+   }
+   100%{
+       stroke-dashoffset: 0;
+   }
+}
+
+@keyframes footwire{
+   0%{
+      stroke-dashoffset: -780;
+   }
+   100%{
+      stroke-dashoffset: 0;
+   }
+}
+
+@keyframes secwavegray{
+   0%{
+      stroke-dashoffset: -908;
+   }
+   100%{
+      stroke-dashoffset: 0;
+   }
+}
+
+@keyframes secwaveorange{
+   0%{
+      stroke-dashoffset: -632;
+   }
+   100%{
+      stroke-dashoffset: 0;
+   }
+}
+
 @keyframes animateherobg {
     0% { 
        background-size: 95%;
