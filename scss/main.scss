@@ -1,100 +1,12 @@
 @import url(../css/fonts.css);
-$assets: '../images/';
-$background: #fff;
-$text_color: #78787e;
-$text_color_dark: #383838;
-$da_orange_color: #e14917;
-$ham_line_stroke_width: 6;
-$light_gray: #f8f8f8;
-$text_white: #fff;
-$very_light_gray: #bababa;
+@import 'mixins';
+@import 'variables';
+@import 'animations';
 
-@mixin btnshadow {
-    box-shadow: 0px 3px 6px $da_orange_color;
-}
-
-@mixin btnshadowdark {
-    box-shadow: 0px 3px 10px rgba($color: #000000, $alpha: 0.25);
-}
-@mixin nthChildNav($item, $count) {
-    $a-delay: 0.3s;
-    $a-duration: 0.3s;
-
-    @for $i from 1 through $count {
-        #{$item}:nth-of-type(#{$i}) {
-            transition: opacity $a-duration ($a-delay + ($i - 1) * 0.1), transform $a-duration ($a-delay + ($i - 1) * 0.1);
-        }
-        // @debug $i;
-    }
-}
-
-@mixin linkbefore {
-    &:hover{
-        color: $da_orange_color;
-        &:before{
-            width: 100%;
-        }
-    }
-    &:before{
-        position: absolute;
-        bottom: -10px;
-        content: "";
-        left: 0;
-        width: 0%;
-        height: 1px;
-        background-color: $da_orange_color;
-        transition: width .3s ease;
-    }
-}
 @media (min-width: 1405px) {
     .container-fluid{
       width: 1400px;
     }
-}
-
-@function strip-unit($value) {
-    @return $value / ($value * 0 + 1);
-}
-
-@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
-    $u1: unit($min-vw);
-    $u2: unit($max-vw);
-    $u3: unit($min-font-size);
-    $u4: unit($max-font-size);
-
-    @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
-        & {
-        font-size: $min-font-size;
-        @media screen and (min-width: $min-vw) {
-            font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
-        }
-        @media screen and (min-width: $max-vw) {
-            font-size: $max-font-size;
-        }
-        }
-    }
-}
-
-$min_width: 320px;
-$max_width: 1200px;
-$min_font: 16px;
-$max_font: 24px;
-
-
-@mixin normalfont {
-    font-family: 'Moderat';
-    font-style: normal;
-    font-weight: normal;
-}
-@mixin boldfont {
-    font-family: 'ModeratB';
-    font-weight: bold;
-    font-style: normal;
-}
-@mixin blackfont {
-    font-family: 'ModeratBl';
-    font-weight: 900;
-    font-style: normal;
 }
 body{
     @include normalfont();
@@ -790,61 +702,5 @@ footer{
     }
 }
 
-@keyframes animateherobg {
-    0% { 
-       background-size: 95%;
-    }
-    to { 
-        background-size: 100%;
-    }
-}
-
-@keyframes firstdot {
-    from { 
-       transform: translate(0px,0px) scale(1);
-    }
-    to { 
-       transform: translate(95vw,85vh) scale(1.5);
-    }
-}
-
-@keyframes seconddot {
-    from { 
-       transform: translate(95vw,85vh) scale(1.5);
-    }
-    to { 
-       transform: translate(0px,0px) scale(1);
-    }
-}
-
-@keyframes thirdot {
-    from { 
-       transform: translate(95vw,10vh) scale(1.5);
-    }
-    to { 
-       transform: translate(0px,90vh) scale(1);
-    }
-}
-
-@keyframes fourthdot {
-    from { 
-       transform: translate(50vw,50vh) scale(1.5);
-    }
-    to { 
-       transform: translate(50vw,10vh) scale(1);
-    }
-}
-
-@keyframes fifthdot {
-    from { 
-       transform: translate(50vw,50vh) scale(1.5);
-    }
-    to { 
-       transform: translate(95vw,50vh) scale(1);
-    }
-}
-
-@keyframes dotscale {
-    0% { width: 10px; height: 10px; }
-    100%   { width: 50px; height: 50px; }
-}
+/****** About page  ****/
+@import 'about';

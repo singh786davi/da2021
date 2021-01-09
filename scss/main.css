@@ -1,4 +1,153 @@
 @import url(../css/fonts.css);
+@-webkit-keyframes animateherobg {
+  0% {
+    background-size: 95%;
+  }
+  to {
+    background-size: 100%;
+  }
+}
+@keyframes animateherobg {
+  0% {
+    background-size: 95%;
+  }
+  to {
+    background-size: 100%;
+  }
+}
+
+@-webkit-keyframes firstdot {
+  from {
+    -webkit-transform: translate(0px, 0px) scale(1);
+            transform: translate(0px, 0px) scale(1);
+  }
+  to {
+    -webkit-transform: translate(95vw, 85vh) scale(1.5);
+            transform: translate(95vw, 85vh) scale(1.5);
+  }
+}
+
+@keyframes firstdot {
+  from {
+    -webkit-transform: translate(0px, 0px) scale(1);
+            transform: translate(0px, 0px) scale(1);
+  }
+  to {
+    -webkit-transform: translate(95vw, 85vh) scale(1.5);
+            transform: translate(95vw, 85vh) scale(1.5);
+  }
+}
+
+@-webkit-keyframes seconddot {
+  from {
+    -webkit-transform: translate(95vw, 85vh) scale(1.5);
+            transform: translate(95vw, 85vh) scale(1.5);
+  }
+  to {
+    -webkit-transform: translate(0px, 0px) scale(1);
+            transform: translate(0px, 0px) scale(1);
+  }
+}
+
+@keyframes seconddot {
+  from {
+    -webkit-transform: translate(95vw, 85vh) scale(1.5);
+            transform: translate(95vw, 85vh) scale(1.5);
+  }
+  to {
+    -webkit-transform: translate(0px, 0px) scale(1);
+            transform: translate(0px, 0px) scale(1);
+  }
+}
+
+@-webkit-keyframes thirdot {
+  from {
+    -webkit-transform: translate(95vw, 10vh) scale(1.5);
+            transform: translate(95vw, 10vh) scale(1.5);
+  }
+  to {
+    -webkit-transform: translate(0px, 90vh) scale(1);
+            transform: translate(0px, 90vh) scale(1);
+  }
+}
+
+@keyframes thirdot {
+  from {
+    -webkit-transform: translate(95vw, 10vh) scale(1.5);
+            transform: translate(95vw, 10vh) scale(1.5);
+  }
+  to {
+    -webkit-transform: translate(0px, 90vh) scale(1);
+            transform: translate(0px, 90vh) scale(1);
+  }
+}
+
+@-webkit-keyframes fourthdot {
+  from {
+    -webkit-transform: translate(50vw, 50vh) scale(1.5);
+            transform: translate(50vw, 50vh) scale(1.5);
+  }
+  to {
+    -webkit-transform: translate(50vw, 10vh) scale(1);
+            transform: translate(50vw, 10vh) scale(1);
+  }
+}
+
+@keyframes fourthdot {
+  from {
+    -webkit-transform: translate(50vw, 50vh) scale(1.5);
+            transform: translate(50vw, 50vh) scale(1.5);
+  }
+  to {
+    -webkit-transform: translate(50vw, 10vh) scale(1);
+            transform: translate(50vw, 10vh) scale(1);
+  }
+}
+
+@-webkit-keyframes fifthdot {
+  from {
+    -webkit-transform: translate(50vw, 50vh) scale(1.5);
+            transform: translate(50vw, 50vh) scale(1.5);
+  }
+  to {
+    -webkit-transform: translate(95vw, 50vh) scale(1);
+            transform: translate(95vw, 50vh) scale(1);
+  }
+}
+
+@keyframes fifthdot {
+  from {
+    -webkit-transform: translate(50vw, 50vh) scale(1.5);
+            transform: translate(50vw, 50vh) scale(1.5);
+  }
+  to {
+    -webkit-transform: translate(95vw, 50vh) scale(1);
+            transform: translate(95vw, 50vh) scale(1);
+  }
+}
+
+@-webkit-keyframes dotscale {
+  0% {
+    width: 10px;
+    height: 10px;
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@keyframes dotscale {
+  0% {
+    width: 10px;
+    height: 10px;
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+  }
+}
+
 @media (min-width: 1405px) {
   .container-fluid {
     width: 1400px;
@@ -1361,153 +1510,168 @@ footer .footer-links li a:hover:before {
   transition: width .3s ease;
 }
 
-@-webkit-keyframes animateherobg {
-  0% {
-    background-size: 95%;
-  }
-  to {
-    background-size: 100%;
+/****** About page  ****/
+.about-sec-hero {
+  padding: 150px 0px 60px 0px;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-sec-hero h1 {
+  font-family: 'ModeratB';
+  font-weight: bold;
+  font-style: normal;
+  color: #312e2e;
+  text-transform: uppercase;
+  -webkit-transform: translateY(25px);
+          transform: translateY(25px);
+  opacity: 0;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.about-sec-hero h1 {
+  font-size: 28px;
+}
+
+@media screen and (min-width: 320px) {
+  .about-sec-hero h1 {
+    font-size: calc(28px + 20 * ((100vw - 320px) / 880));
   }
 }
 
-@keyframes animateherobg {
-  0% {
-    background-size: 95%;
-  }
-  to {
-    background-size: 100%;
+@media screen and (min-width: 1200px) {
+  .about-sec-hero h1 {
+    font-size: 48px;
   }
 }
 
-@-webkit-keyframes firstdot {
-  from {
-    -webkit-transform: translate(0px, 0px) scale(1);
-            transform: translate(0px, 0px) scale(1);
-  }
-  to {
-    -webkit-transform: translate(95vw, 85vh) scale(1.5);
-            transform: translate(95vw, 85vh) scale(1.5);
+.about-sec-hero h2 {
+  font-family: 'ModeratB';
+  font-weight: bold;
+  font-style: normal;
+  color: #e14917;
+  -webkit-transform: translateY(25px);
+          transform: translateY(25px);
+  opacity: 0;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.about-sec-hero h2 {
+  font-size: 22px;
+}
+
+@media screen and (min-width: 320px) {
+  .about-sec-hero h2 {
+    font-size: calc(22px + 6 * ((100vw - 320px) / 880));
   }
 }
 
-@keyframes firstdot {
-  from {
-    -webkit-transform: translate(0px, 0px) scale(1);
-            transform: translate(0px, 0px) scale(1);
-  }
-  to {
-    -webkit-transform: translate(95vw, 85vh) scale(1.5);
-            transform: translate(95vw, 85vh) scale(1.5);
+@media screen and (min-width: 1200px) {
+  .about-sec-hero h2 {
+    font-size: 28px;
   }
 }
 
-@-webkit-keyframes seconddot {
-  from {
-    -webkit-transform: translate(95vw, 85vh) scale(1.5);
-            transform: translate(95vw, 85vh) scale(1.5);
-  }
-  to {
-    -webkit-transform: translate(0px, 0px) scale(1);
-            transform: translate(0px, 0px) scale(1);
+.about-sec-hero p {
+  color: #78787e;
+  font-family: 'Moderat';
+  font-style: normal;
+  font-weight: normal;
+  -webkit-transform: translateY(25px);
+          transform: translateY(25px);
+  opacity: 0;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.about-sec-hero p {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 320px) {
+  .about-sec-hero p {
+    font-size: calc(16px + 2 * ((100vw - 320px) / 880));
   }
 }
 
-@keyframes seconddot {
-  from {
-    -webkit-transform: translate(95vw, 85vh) scale(1.5);
-            transform: translate(95vw, 85vh) scale(1.5);
-  }
-  to {
-    -webkit-transform: translate(0px, 0px) scale(1);
-            transform: translate(0px, 0px) scale(1);
+@media screen and (min-width: 1200px) {
+  .about-sec-hero p {
+    font-size: 18px;
   }
 }
 
-@-webkit-keyframes thirdot {
-  from {
-    -webkit-transform: translate(95vw, 10vh) scale(1.5);
-            transform: translate(95vw, 10vh) scale(1.5);
-  }
-  to {
-    -webkit-transform: translate(0px, 90vh) scale(1);
-            transform: translate(0px, 90vh) scale(1);
+.about-sec-hero .since {
+  max-width: 300px;
+  border-radius: 30px;
+  -webkit-box-shadow: inset 7px 8px 10px -10px rgba(0, 0, 0, 0.75);
+          box-shadow: inset 7px 8px 10px -10px rgba(0, 0, 0, 0.75);
+  padding: 15px 25px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #f5f5f5;
+  font-family: 'ModeratB';
+  font-weight: bold;
+  font-style: normal;
+  color: #e14917;
+  text-transform: uppercase;
+}
+
+.about-sec-hero .since {
+  font-size: 18px;
+}
+
+@media screen and (min-width: 320px) {
+  .about-sec-hero .since {
+    font-size: calc(18px + 4 * ((100vw - 320px) / 880));
   }
 }
 
-@keyframes thirdot {
-  from {
-    -webkit-transform: translate(95vw, 10vh) scale(1.5);
-            transform: translate(95vw, 10vh) scale(1.5);
-  }
-  to {
-    -webkit-transform: translate(0px, 90vh) scale(1);
-            transform: translate(0px, 90vh) scale(1);
+@media screen and (min-width: 1200px) {
+  .about-sec-hero .since {
+    font-size: 22px;
   }
 }
 
-@-webkit-keyframes fourthdot {
-  from {
-    -webkit-transform: translate(50vw, 50vh) scale(1.5);
-            transform: translate(50vw, 50vh) scale(1.5);
-  }
-  to {
-    -webkit-transform: translate(50vw, 10vh) scale(1);
-            transform: translate(50vw, 10vh) scale(1);
+@media screen and (max-width: 575px) {
+  .about-sec-hero .since {
+    margin: 0 auto;
   }
 }
 
-@keyframes fourthdot {
-  from {
-    -webkit-transform: translate(50vw, 50vh) scale(1.5);
-            transform: translate(50vw, 50vh) scale(1.5);
-  }
-  to {
-    -webkit-transform: translate(50vw, 10vh) scale(1);
-            transform: translate(50vw, 10vh) scale(1);
-  }
+.about-sec-hero .container-fluid {
+  position: relative;
+  z-index: 3;
 }
 
-@-webkit-keyframes fifthdot {
-  from {
-    -webkit-transform: translate(50vw, 50vh) scale(1.5);
-            transform: translate(50vw, 50vh) scale(1.5);
-  }
-  to {
-    -webkit-transform: translate(95vw, 50vh) scale(1);
-            transform: translate(95vw, 50vh) scale(1);
-  }
+.about-sec-hero .about-svg-upper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
-@keyframes fifthdot {
-  from {
-    -webkit-transform: translate(50vw, 50vh) scale(1.5);
-            transform: translate(50vw, 50vh) scale(1.5);
-  }
-  to {
-    -webkit-transform: translate(95vw, 50vh) scale(1);
-            transform: translate(95vw, 50vh) scale(1);
-  }
+.about-sec-hero .about-da-team-image {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 539px;
+  height: 607px;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  z-index: 2;
+  background: url(../images/da-team.png);
+  background-position: right;
+  background-size: cover;
+  display: none;
 }
 
-@-webkit-keyframes dotscale {
-  0% {
-    width: 10px;
-    height: 10px;
-  }
-  100% {
-    width: 50px;
-    height: 50px;
-  }
-}
-
-@keyframes dotscale {
-  0% {
-    width: 10px;
-    height: 10px;
-  }
-  100% {
-    width: 50px;
-    height: 50px;
+@media screen and (min-width: 992px) {
+  .about-sec-hero .about-da-team-image {
+    display: block;
   }
 }
 /*# sourceMappingURL=main.css.map */
