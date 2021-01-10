@@ -1795,10 +1795,10 @@ footer .footer-links li a:hover:before {
 
 .menucnt .menuaccordioncnt .accordion-button {
   background-color: transparent;
-}
-
-.menucnt .menuaccordioncnt .accordion-button {
   color: #e14917;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
 }
 
 .menucnt .menuaccordioncnt .accordion-button {
@@ -1815,12 +1815,6 @@ footer .footer-links li a:hover:before {
   .menucnt .menuaccordioncnt .accordion-button {
     font-size: 28px;
   }
-}
-
-.menucnt .menuaccordioncnt .accordion-button:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  border: none;
 }
 
 .menucnt .menuaccordioncnt .accordion-button:after {
