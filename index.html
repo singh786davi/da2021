@@ -26,18 +26,8 @@
           </nav>
         </div>
         <div class="main-container-menu">
-          <div class="row mt-5 align-items-md-end">
-            <div class="col-md-4 text-center text-md-end order-md-2">
-              <ul class="main-menu">
-                <li class="main-menu-item"><a href="#">Home</a></li>
-                <li class="main-menu-item"><a href="#">About Us</a></li>
-                <li class="main-menu-item"><a href="#">Our Work</a></li>
-                <li class="main-menu-item"><a href="#">Case Studies</a></li>
-                <li class="main-menu-item"><a href="#">Blog</a></li>
-                <li class="main-menu-item"><a href="#">Contact Us</a></li>
-              </ul>
-            </div>
-            <div class="col-md-8 order-md-1">
+          <div class="row mt-4 mt-md-5 align-items-md-end">
+            <div class="col-md-8">
               <form action="" id="search-da">
                 <div class="mb-3">
                   <label for="search" class="form-label">Search</label>
@@ -47,11 +37,21 @@
                   </div>                
                 </div>
               </form>
-            </div>          
+            </div>
+            <div class="col-md-4 mt-4 mt-md-0 text-start text-md-end">
+              <ul class="main-menu">
+                <li class="main-menu-item"><a href="#">Home</a></li>
+                <li class="main-menu-item"><a href="#">About Us</a></li>
+                <li class="main-menu-item"><a href="#">Our Work</a></li>
+                <li class="main-menu-item"><a href="#">Case Studies</a></li>
+                <li class="main-menu-item"><a href="#">Blog</a></li>
+                <li class="main-menu-item"><a href="#">Contact Us</a></li>
+              </ul>
+            </div>         
           </div>
           <div class="row mt-5 service-menu-cnt">
             <div class="col-12 col-lg-8">
-              <div class="row">
+              <div class="row menunormal">
                 <div class="col-md-4 mb-4 text-center text-md-start">
                   <h4 class="mb-3 mb-md-4">Web Design</h4>
                   <ul class="service-links">
@@ -73,6 +73,56 @@
                     <li><a href="#">Cloud Hosting</a></li>
                     <li><a href="#">IT Managed Services</a></li>
                   </ul>
+                </div>
+              </div>
+              <div class="row menuaccordioncnt">
+                <div class="accordion menuaccordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h4 class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Web Design
+                      </button>
+                    </h4>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <ul class="service-links">
+                          <li><a href="#">Web Design & Development</a></li>
+                          <li><a href="#">Web Design & Development</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h4 class="accordion-header" id="headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Digital Marketing
+                      </button>
+                    </h4>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <ul class="service-links">
+                          <li><a href="#">Google Advertising</a></li>
+                          <li><a href="#">Social Media Advertising</a></li>
+                          <li><a href="#">Social Media Management</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h4 class="accordion-header" id="headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Web Design
+                      </button>
+                    </h4>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <ul class="service-links">
+                          <li><a href="#">Cloud Hosting</a></li>
+                          <li><a href="#">IT Managed Services</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
