@@ -54,7 +54,7 @@
 
 @-webkit-keyframes footwire {
   0% {
-    stroke-dashoffset: -780;
+    stroke-dashoffset: 780;
   }
   100% {
     stroke-dashoffset: 0;
@@ -63,7 +63,7 @@
 
 @keyframes footwire {
   0% {
-    stroke-dashoffset: -780;
+    stroke-dashoffset: 780;
   }
   100% {
     stroke-dashoffset: 0;
@@ -72,7 +72,7 @@
 
 @-webkit-keyframes secwavegray {
   0% {
-    stroke-dashoffset: -908;
+    stroke-dashoffset: 908;
   }
   100% {
     stroke-dashoffset: 0;
@@ -81,7 +81,7 @@
 
 @keyframes secwavegray {
   0% {
-    stroke-dashoffset: -908;
+    stroke-dashoffset: 908;
   }
   100% {
     stroke-dashoffset: 0;
@@ -90,7 +90,7 @@
 
 @-webkit-keyframes secwaveorange {
   0% {
-    stroke-dashoffset: -632;
+    stroke-dashoffset: 632;
   }
   100% {
     stroke-dashoffset: 0;
@@ -99,7 +99,7 @@
 
 @keyframes secwaveorange {
   0% {
-    stroke-dashoffset: -632;
+    stroke-dashoffset: 632;
   }
   100% {
     stroke-dashoffset: 0;
