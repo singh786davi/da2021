@@ -9,7 +9,7 @@
 
 @keyframes titlewavedown{
    0%{
-       stroke-dashoffset: -280;
+       stroke-dashoffset: 280;
    }
    100%{
        stroke-dashoffset: 0;
@@ -18,7 +18,7 @@
 
 @keyframes titlewaveup{
    0%{
-       stroke-dashoffset: -253;
+       stroke-dashoffset: 253;
    }
    100%{
        stroke-dashoffset: 0;
