@@ -139,16 +139,14 @@ header{
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url('../images/hero-img-mobile.png');
+    background-image: url('../images/svgs/home-bg.svg');
+    background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     overflow: hidden;    
     h3,h1,a{
         position: relative;
         z-index: 3;
-    }
-    @media screen and (min-width: 768px){
-        background-image: url('../images/hero-img.png');        
     }
 }
 .da-btn{
@@ -201,7 +199,7 @@ header{
             fill: none;
             stroke-dasharray: 454;
             &.is-visible{
-                animation: wave 1.5s ease-in forwards;    
+                animation: wave 2s ease-in forwards;    
             }
         }
         #graypath{
@@ -211,7 +209,7 @@ header{
             fill: none;
             stroke-dasharray: 454;
             &.is-visible{
-                animation: wave 1.5s ease-in forwards;    
+                animation: wave 2s ease-in forwards;    
             }
         }
         @media screen and (min-width: 768px){
@@ -286,6 +284,8 @@ header{
     .container-fluid{
         z-index: 2;
         position: relative;
+        padding-top: 130px;
+        padding-bottom: 50px;
     }
 }
 .btn-dark-shadow{
@@ -408,7 +408,7 @@ header{
 
 .case-studies {
     @include boldfont();
-    padding-bottom: 60px;
+    padding-bottom: 100px;
     h3{
         @include fluid-type($min_width, $max_width, 16px, 18px);
         color: $da_orange_color;

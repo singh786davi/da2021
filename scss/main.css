@@ -463,7 +463,8 @@ header.fixed {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100vh;
-  background-image: url("../images/hero-img-mobile.png");
+  background-image: url("../images/svgs/home-bg.svg");
+  background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -472,12 +473,6 @@ header.fixed {
 .hero h3, .hero h1, .hero a {
   position: relative;
   z-index: 3;
-}
-
-@media screen and (min-width: 768px) {
-  .hero {
-    background-image: url("../images/hero-img.png");
-  }
 }
 
 .da-btn {
@@ -569,8 +564,8 @@ header.fixed {
 }
 
 .intro-sec svg #orangepath.is-visible {
-  -webkit-animation: wave 1.5s ease-in forwards;
-          animation: wave 1.5s ease-in forwards;
+  -webkit-animation: wave 2s ease-in forwards;
+          animation: wave 2s ease-in forwards;
 }
 
 .intro-sec svg #graypath {
@@ -582,8 +577,8 @@ header.fixed {
 }
 
 .intro-sec svg #graypath.is-visible {
-  -webkit-animation: wave 1.5s ease-in forwards;
-          animation: wave 1.5s ease-in forwards;
+  -webkit-animation: wave 2s ease-in forwards;
+          animation: wave 2s ease-in forwards;
 }
 
 @media screen and (min-width: 768px) {
@@ -700,6 +695,8 @@ header.fixed {
 .solutions-to-grow .container-fluid {
   z-index: 2;
   position: relative;
+  padding-top: 130px;
+  padding-bottom: 50px;
 }
 
 .btn-dark-shadow {
@@ -915,7 +912,7 @@ header.fixed {
   font-family: 'ModeratB';
   font-weight: bold;
   font-style: normal;
-  padding-bottom: 60px;
+  padding-bottom: 100px;
 }
 
 .case-studies h3 {
