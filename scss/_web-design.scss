@@ -15,6 +15,10 @@
     @media screen and (min-width: 768px){
         padding-bottom: 120px;
     }
+    .container{
+        position: relative;
+        z-index: 3;
+    }
     h2{
         @include boldfont();
         color: $carbon_color;
@@ -55,6 +59,7 @@
     #Layer_1{
         position: absolute;
         bottom: 0;
+        z-index: 1;
     }
 }
 .why-choose-us-wd{

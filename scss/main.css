@@ -2361,6 +2361,11 @@ footer .footer-links li a:hover:before {
   }
 }
 
+.unlock-the-potential .container {
+  position: relative;
+  z-index: 3;
+}
+
 .unlock-the-potential h2 {
   font-family: 'ModeratB';
   font-weight: bold;
@@ -2469,6 +2474,7 @@ footer .footer-links li a:hover:before {
 .unlock-the-potential #Layer_1 {
   position: absolute;
   bottom: 0;
+  z-index: 1;
 }
 
 .why-choose-us-wd {
