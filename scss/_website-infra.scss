@@ -1,0 +1,218 @@
+.web-infra-hero{
+    background-color: #fff;
+    padding: 120px 0px 30px 0px;
+
+    @media screen and (min-width: 768px){
+        padding: 160px 0px 30px 0px;
+    }
+}
+.unlock-the-potential{
+    &.wi{
+        padding-bottom: 60px;
+    }
+}
+.wi-services{
+    h4{
+        @include boldfont();
+        @include fluid-type($min_width,$max_width,16px,18px);
+    }
+}
+.wi-why-choose-us{
+    position: relative;
+    background-color: #fff;
+    padding-top: 45px;
+    h2{
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: -70px;
+        @include boldfont();
+        @include fluid-type($min_width,$max_width,28px,35px);
+        color: $carbon_color;
+        @media screen and (min-width: 576px){
+            top: -110px;
+        }
+        @media screen and (min-width: 992px){
+            top: -40%;
+        }
+
+    }
+    .whybox{
+        h3{
+            @include boldfont();
+            @include fluid-type($min_width,$max_width,18px,20px);
+            color: $da_orange_color;
+        }
+    }
+}
+#wi-why-btm{
+    position: relative;
+    z-index: 2;
+}
+.wi-hosting-plans{
+    .planbox
+    {
+        *{
+            position: relative;
+            z-index: 2;
+        }
+        position: relative;
+        padding: 100px 12px;
+        @media screen and (min-width: 1199px)
+        {
+            padding: 100px 40px;
+        }
+        &:before{
+            content: "";
+            background: #fff;
+            position: absolute;
+            top: 0%;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            z-index: 1;
+            border: 2px solid #CCCCCC;
+            border-radius: 75px;
+            @media screen and (min-width: 992px)
+            {
+                height: 125%;
+                top: -40%;
+            }
+            @media screen and (min-width: 1300px) {
+                height: 150%;
+                top: -50%;                                
+            }
+            @media screen and (min-width: 1560px) {
+                height: 160%;
+                top: -60%;                                
+            }
+        }
+        h3{
+            @include boldfont();
+            @include fluid-type($min_width,$max_width,18px,22px);
+            color: $text_color;
+        }
+        p{
+            @include normalfont();
+            @include fluid-type($min_width,$max_width,14px,16px);
+            color: $text_color;
+        }        
+    }
+}
+.bubblebox {
+    padding: 80px 0px 0px 0px;
+    @media screen and (min-width: 1200px)
+    {
+        padding: 160px 0 0 0;
+    }
+    .mainbubble{
+        background-color: #fff;
+        border: 1px solid #CECDCD;
+        padding: 30px;
+        box-shadow: 0px 3px 7px rgba($color: #000000, $alpha: 0.16);
+        border-radius: 10%;
+        position: relative;
+        top: -60px;
+        z-index: 4;
+        @media screen and (min-width: 768px) {
+            top: -120px;  
+            padding: 60px 50px;   
+            border-radius: 120px;       
+        }
+        h3{
+            color: $da_orange_color;
+            @include boldfont();
+            @include fluid-type($min_width,$max_width,28px,35px);
+        }
+        p{
+            color: $text_color;
+            @include normalfont();
+            @include fluid-type($min_width,$max_width,16px,18px);
+        }
+        .section-waves{
+            top: 50%;
+            right: -28%;
+            left: auto;
+            transform: rotate(45deg);
+            .orangewave{
+                top: 50%;
+                left: auto;     
+                transform: none;           
+            }
+        }
+    }
+    .btn{
+        position: relative;
+        top: -10px;
+        @media screen and (min-width: 768px) {
+            top: -60px;
+        }
+    }
+    .section-waves{
+        top: 50%;
+        z-index: 5;    
+        display: none;
+        @media screen and (min-width: 768px)
+        {
+            display: block;
+        }
+        .graywave{
+            transform: rotate(20deg);
+            left: -15%;
+            top: 20%;
+        } 
+        .orangewave{
+            transform: rotate(50deg);
+            top: -50px;
+            left: -15%;
+        }           
+    }
+}
+.round-thumb{
+    position: relative;
+    &:before{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url(../images/round-web-infra.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 20%;
+        z-index: 3;
+        content: "";
+        @media screen and (min-width: 768px) {
+            border-radius: 40%;
+        }
+    }
+    &:after{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        box-shadow: 0px 11px 62px rgba($color: #000000, $alpha: 0.08);
+        content: "";
+        border-radius: 20%;
+        left: 0;
+        top: -60px;
+        z-index: 1;
+        @media screen and (min-width: 768px) {
+            border-radius: 40%;
+        }
+    }
+    img{
+        visibility: hidden;
+    }
+    .main-border{
+        position: absolute;
+        top: -30px;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #fff, $alpha: .5);
+        box-shadow: 0px 11px 62px rgba($color: #000000, $alpha: 0.08);
+        border-radius: 20%;
+        z-index: 2;
+        @media screen and (min-width: 768px) {
+            border-radius: 40%;
+        }        
+    }
+}
