@@ -655,15 +655,39 @@
       } )
     
     
-      //Menu toggler
-      document.getElementById("pullmenu").onclick = function() {
-        document.getElementsByClassName("menucnt")[0].classList.add("open");
-      }
-    
-      document.getElementById("pushmenu").onclick = function() {
-        document.getElementsByClassName("menucnt")[0].classList.remove("open");
-      }
-      //Menu toggler ends
+     //Services submenu toggler
+    document.querySelector(".showservices").onclick = function()
+    {
+      document.querySelector("#services").classList.toggle("visuallyhidden");
+      document.querySelector("#our-work").classList.add("visuallyhidden");
+      return false;
+    };
+
+    //Our work submenu toggler
+    document.querySelector(".showourwork").onclick = function()
+    {
+      document.querySelector("#our-work").classList.toggle("visuallyhidden");
+      document.querySelector("#services").classList.add("visuallyhidden");
+      return false;
+    };
+
+    //CLicking outside menu hide megamenu
+    // Detect all clicks on the document
+    document.addEventListener("click", function(event) {
+      // If user clicks inside the element, do nothing
+      if (event.target.closest(".megamenu") || event.target.closest("header")) return;
+
+      // If user clicks outside the element, hide it!
+      document.getElementById("services").classList.add("visuallyhidden");
+      document.getElementById("our-work").classList.add("visuallyhidden");
+    });
+
+    // //Menu toggler
+    // document.getElementById("pullmenu").onclick = function() {
+    //   document.getElementsByClassName("menucnt")[0].classList.add("open");
+    // }
+
+    //Menu toggler ends
     
       // requestAnimationFrame
       const raf = 
