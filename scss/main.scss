@@ -142,17 +142,14 @@ h2{
     border: none !important;
 }
 header{
+    background: #fff;
+    box-shadow: 0px 1px 10px rgba(0,0,0,.15);
     &.site-header{
         position: fixed;
         top: 0;
         width: 100%;
         z-index: 99;
     }
-    &.fixed{
-        background: #fff;
-        box-shadow: 0px 1px 10px rgba(0,0,0,.15);
-    }
-
 }
 .hero{
     padding-top: 82px;
@@ -932,6 +929,22 @@ footer{
         color: $da_orange_color;
     }
 }
+
+.da-media-card{
+    background-color: #fff;
+    border-radius: 10px;
+    h6{
+        @include boldfont();
+        @include fluid-type($min_width,$max_width,12px,14px);
+        color: $menu_item_hover_color;
+    }
+    p{
+        @include normalfont();
+        @include fluid-type($min_width,$max_width,10px,12px);
+    }
+}
+/****** Navbar nav ******/
+@import 'navbar-da';
 
 /****** About page  ****/
 @import 'about';

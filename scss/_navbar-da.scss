@@ -1,0 +1,249 @@
+.da-navbar{
+    padding: 0 !important;
+}
+.da-nav-desk{
+    display: none;
+    @media screen and (min-width:576px)
+    {
+        display: flex   
+    }
+}
+.da-nav-mob{
+    display: flex;
+    @media screen and (min-width:576px)
+    {
+        display: none;   
+    }
+    .dropdown-menu{
+        border: none;
+    }
+    h4{
+        color: $menu_item_hover_color;
+        @include boldfont();
+        @include fluid-type($min_width,$max_width,14px,16px);
+    }
+    li{
+        border-bottom: 1px solid #cbcbcb;
+        &:last-child{
+            border-bottom: none;
+        }
+    }
+    .submenus{
+        padding-left: 0;
+        li{
+            list-style: none;
+            margin: 0px;
+            padding: 0 !important;
+            border: none;
+            a{
+                @include normalfont();
+                @include fluid-type($min_width,$max_width,13px,15px);
+                position: relative;
+                text-decoration: none;
+                color: $menu_item_hover_color;
+                &:hover{
+                    color: $da_orange_color;
+                    &:before{
+                        width: 100%;
+                    }
+                }
+                &:before{
+                    position: absolute;
+                    background-color: $da_orange_color;
+                    bottom: -10px;
+                    width: 0%;
+                    height: 1.5px;
+                    left: 0;
+                    content: "";
+                    transition: width .3s ease-in;
+                }
+            }
+        }
+    }
+}
+.da-nav{
+    padding: 0 !important;
+    li{
+        padding: 10px !important;
+        @media screen and (min-width: 768px) {
+            padding: 0px 30px !important;
+        }
+        a{
+            @include boldfont();
+            @include fluid-type($min_width,$max_width,15px,17px);
+            line-height: 36px;
+            color: $text_color_dark;
+            padding: 0px !important;
+            position: relative;
+            &:hover{
+                &:before{
+                    width: 100%;
+                }
+            }
+
+            &.dropdown-toggle{
+                &::after{
+                    display: none;
+                }
+            }
+
+            @media screen and (min-width: 576px)
+            {
+                &:before{
+                    position: absolute;
+                    left: 0;
+                    bottom: -13px;
+                    width: 0%;
+                    height: 4px;
+                    background-color: $da_orange_color;
+                    transition: width .3s ease-in;
+                    content: "";
+                }
+            }
+        }
+        &.haschildren{
+            position: relative;
+            svg{
+                position: absolute;
+                top:50%;
+                right: 0;
+                transform: translate(0,-50%) !important;
+                @media screen and (min-width: 768px) {
+                    right: -30px;
+                }
+            }
+        }
+    }
+}
+.megamenu {
+    background: #eeeeee;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 30px 0;
+    z-index: 99;
+    transition: all .3s ease-in;
+    box-shadow: 0px 2px 10px rgba(0,0,0,.20);
+    &:before{
+        width: 60%;
+        right: 0;
+        top: 0;
+        height: 100%;
+        position: absolute;
+        content: "";
+        background-color: #fff;
+        transition: width .4s linear .6s;
+        @media screen and (min-width: 992px){
+            width: 55%;      
+            border-radius: 150px 0px 0px 150px;      
+        }
+    }
+    .container{
+        position: relative;
+        z-index: 2;
+    }
+    .mm-waves{
+        position: absolute;
+        top: -10px;
+        left: 0;
+        width: 33.333%;
+        z-index: 1;
+        @media screen and (min-width: 1200px)
+        {
+            top: -40px;
+        } 
+        .orangepath,.graypath{
+            stroke-dasharray: 454;
+        }       
+    }
+    &.visuallyhidden{
+        &:before{
+            width: 0%;
+        }
+    }
+    &:not(.visuallyhidden)
+    {
+        .orangepath,.graypath{
+            animation: wave 2s ease-in;
+        } 
+    }
+    @media screen and (min-width: 992px)
+    {
+        padding: 60px 0;
+    }
+    h4{
+        color: $menu_item_hover_color;
+        @include boldfont();
+        @include fluid-type($min_width,$max_width,14px,16px);
+    }
+    .submenus{
+        padding-left: 0;
+        li{
+            list-style: none;
+            margin-bottom: 10px;
+            &:last-child{
+                margin-bottom: 10px;
+            }
+            a{
+                @include normalfont();
+                @include fluid-type($min_width,$max_width,13px,15px);
+                position: relative;
+                text-decoration: none;
+                color: $menu_item_hover_color;
+                &:hover{
+                    color: $da_orange_color;
+                    &:before{
+                        width: 100%;
+                    }
+                }
+                &:before{
+                    position: absolute;
+                    background-color: $da_orange_color;
+                    bottom: -10px;
+                    width: 0%;
+                    height: 1.5px;
+                    left: 0;
+                    content: "";
+                    transition: width .3s ease-in;
+                }
+            }
+        }
+    }
+}
+.navbar-toggler{
+    &:not(.collapsed)
+    {
+        .hamicon{
+            display: none;
+        }
+        .closeicon{
+            display: block;
+        }
+    }
+    
+    &.collapsed
+    {
+        .hamicon{
+            display: block;
+        }
+        .closeicon{
+            display: none;
+        }
+    }
+    svg{
+        color: $da_orange_color;
+        width: 35px;
+        height: 35px;
+    }
+} 
+
+@media screen and (max-width: 575px)
+{
+    #navbarSupportedContent
+    {
+        max-height: calc(100vh - 66px);
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+}
