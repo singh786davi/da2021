@@ -1,0 +1,161 @@
+.top-smm-svg{
+    position: relative;
+    z-index: 3;
+    
+}
+.smm {
+    position: relative;
+    svg
+    {
+        position: absolute;
+        top: -30%;    
+    }
+    h4{
+        @include boldfont();
+        @include fluid-type($min_width,$max_width,18px,20px);
+        color: $carbon_color;
+    }
+}
+.sm-platform-we-work-with{
+    position: relative;
+    overflow-x: hidden;
+    .section-waves.topone{
+        top: 50%;
+        left: 0;
+        width: 50%;
+        transform: translate(0,-50%);
+    }
+    .section-waves.bottomone{
+        top: 50%;
+        right: 0;
+        width: 30%;
+        transform: translate(0,-50%);
+    }
+}
+.platform-box{
+    position: relative;
+    z-index: 3;
+    background: #fff;
+    box-shadow: 0px 3px 7px rgba($color: #000000, $alpha: 0.16);
+    border-radius: 30%;
+    padding: 2.5rem;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    @media screen and (min-width: 576px)
+    {
+        margin: 50px 0;
+        padding: 2.5rem 5rem;
+    }
+    svg
+    {
+        width: 73.11px;
+        height: 73.11px;
+        color: #4989F5;
+    }
+    h3{
+        @include boldfont();
+        @include fluid-type($min_width,$max_width,24px,29px);
+        color: $da_orange_color;
+    }
+    h5{
+        @include boldfont();
+        @include fluid-type($min_width,$max_width,18px,21px);
+        color: $text_color;
+    }
+}
+.candybg{
+    position: relative;
+    overflow: hidden;
+    &::before{
+        background-image: url(../images/svgs/candy-shape.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 400%;
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+
+        @media screen and (min-width: 576px)
+        {
+            background-size: 100% auto;
+        }
+        @media screen and (min-width: 1347px){
+            width: 1347px;
+            background-size: cover;
+        }
+    } 
+    @media screen and (min-width: 1200px) {
+        padding: calc(100vw * 7 / 100) 0;
+    }   
+    .section-waves {
+        top: 50%;
+        transform: rotate(45deg);
+        left: -10%;
+    }
+}
+.bottom-case-study--box{
+    background-image: url(../images/KATO-MK2-G_1728x700.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    .maincsbox{
+        width: 100%;
+        @media screen and (min-width: 768px){
+            position: absolute;
+            bottom: 50px;
+            z-index: 2;
+        }
+    }
+    .btmshapesvg,
+    .topshapesvg{
+        position: absolute;
+        left: 0;
+        width: 100%;
+    }
+    .btmshapesvg{
+        bottom: 0;
+        height: 100px;
+    }
+    .topshapesvg{
+        top: 0;
+        height: 100px;
+    }
+    @media screen and (min-width: 768px){
+        .btmshapesvg{
+            height: 300px;
+        }
+        .topshapesvg{
+            height: 300px;
+        }
+    }
+}
+.maincsbox-b{
+    background: #fff;
+    border-radius: 50px;
+    padding: 1.5rem;
+    box-shadow: 0px 11px 79px rgba($color: #000000, $alpha: 0.16);
+    p{
+        @include fluid-type($min_width,$max_width,16px,20px);
+    }
+    .action-box {
+       
+        background: #fff;
+        border-radius: 50px;
+        padding: 0.75rem 1.5rem;
+        border: 1px solid #797979;
+        text-align: center;
+        @media screen and (min-width: 768px)
+        {
+            position: absolute;
+            top: -45px;
+            left: 50%;
+            transform: translate(-50%,0%);
+        }
+        a{
+            text-decoration: none;
+        }
+    }
+}
