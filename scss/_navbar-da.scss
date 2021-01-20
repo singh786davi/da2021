@@ -134,6 +134,7 @@
         content: "";
         background-color: #fff;
         transition: width .4s linear .6s;
+        z-index: 2;
         @media screen and (min-width: 992px){
             width: 55%;      
             border-radius: 150px 0px 0px 150px;      
@@ -147,7 +148,7 @@
         position: absolute;
         top: -10px;
         left: 0;
-        width: 33.333%;
+        width: 60%;
         z-index: 1;
         @media screen and (min-width: 1200px)
         {

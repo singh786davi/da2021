@@ -3,6 +3,9 @@
     z-index: 3;
     
 }
+.unlock-the-potential.smm{
+    padding-bottom: 30px;
+}
 .smm {
     position: relative;
     svg
@@ -88,13 +91,17 @@
         }
     } 
     @media screen and (min-width: 1200px) {
-        padding: calc(100vw * 7 / 100) 0;
+        .marginforshape
+        {
+            margin-bottom: calc(100vw * 12 / 100) !important;
+        }        
     }   
     .section-waves {
         top: 50%;
         transform: rotate(45deg);
         left: -10%;
     }
+    
 }
 .bottom-case-study--box{
     background-image: url(../images/KATO-MK2-G_1728x700.png);

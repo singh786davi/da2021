@@ -527,17 +527,21 @@ h2 {
   border: none !important;
 }
 
-header {
-  background: #fff;
-  -webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.15);
-}
-
 header.site-header {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 99;
+}
+
+header.v1 {
+  background: #fff;
+}
+
+header.fixed {
+  background: #fff;
+  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
 }
 
 .hero {
@@ -552,11 +556,16 @@ header.site-header {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100vh;
-  background-image: url("../images/svgs/home-bg.svg");
-  background-size: cover;
+  background-image: url("../images/svgs/hero-img-mobile.svg");
   background-position: center center;
   background-repeat: no-repeat;
   overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: url("../images/svgs/hero-img.svg");
+  }
 }
 
 .hero h3, .hero h1, .hero a {
@@ -726,7 +735,7 @@ header.site-header {
 }
 
 .solutions-to-grow {
-  background-image: url("../images/solutions-to-grow-business-bg.png");
+  background-image: url("../images/solutions-to-grow-business-bg-2.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -2418,6 +2427,7 @@ footer .footer-links li a:hover:before {
   background-color: #fff;
   -webkit-transition: width .4s linear .6s;
   transition: width .4s linear .6s;
+  z-index: 2;
 }
 
 @media screen and (min-width: 992px) {
@@ -2436,7 +2446,7 @@ footer .footer-links li a:hover:before {
   position: absolute;
   top: -10px;
   left: 0;
-  width: 33.333%;
+  width: 60%;
   z-index: 1;
 }
 
@@ -3984,6 +3994,10 @@ footer .footer-links li a:hover:before {
   z-index: 3;
 }
 
+.unlock-the-potential.smm {
+  padding-bottom: 30px;
+}
+
 .smm {
   position: relative;
 }
@@ -4140,8 +4154,8 @@ footer .footer-links li a:hover:before {
 }
 
 @media screen and (min-width: 1200px) {
-  .candybg {
-    padding: calc(100vw * 7 / 100) 0;
+  .candybg .marginforshape {
+    margin-bottom: calc(100vw * 12 / 100) !important;
   }
 }
 
