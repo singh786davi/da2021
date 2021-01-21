@@ -986,6 +986,22 @@ footer{
 .reverserotate{
     transform: rotate(180deg);
 }
+.call-to-action-curved{
+    position: relative;
+    .cta-curved-thumb-part{
+        position: relative;
+        svg{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    }
+    .call-to-action-curved-content{
+        background-color: #fff;
+    }
+}
+
 /****** Navbar nav ******/
 @import 'navbar-da';
 

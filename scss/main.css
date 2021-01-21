@@ -2203,6 +2203,25 @@ footer .footer-links li a:hover:before {
           transform: rotate(180deg);
 }
 
+.call-to-action-curved {
+  position: relative;
+}
+
+.call-to-action-curved .cta-curved-thumb-part {
+  position: relative;
+}
+
+.call-to-action-curved .cta-curved-thumb-part svg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.call-to-action-curved .call-to-action-curved-content {
+  background-color: #fff;
+}
+
 /****** Navbar nav ******/
 .da-navbar {
   padding: 0 !important;
