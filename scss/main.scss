@@ -477,7 +477,7 @@ header.fixed{
     margin: -1px;
     padding: 0;
     border: 0;
-    opacity: 0;;
+    opacity: 0;
 }
 .cta h4{
     @include boldfont();
@@ -952,10 +952,10 @@ footer{
     }
 }
 .carbon-color{
-    color: $carbon_color;
+    color: $carbon_color !important;
 }
 .da-orange-color{
-    color: $da_orange_color;
+    color: $da_orange_color !important;
 }
 .bold-font{
     @include boldfont();
@@ -999,6 +999,14 @@ footer{
     }
     .call-to-action-curved-content{
         background-color: #fff;
+        h3{
+            br{
+                display: none;
+                @media screen and (min-width: 576px) {
+                    display: block;
+                }
+            }
+        }
     }
 }
 

@@ -2106,11 +2106,11 @@ footer .footer-links li a:hover:before {
 }
 
 .carbon-color {
-  color: #312e2e;
+  color: #312e2e !important;
 }
 
 .da-orange-color {
-  color: #e14917;
+  color: #e14917 !important;
 }
 
 .bold-font {
@@ -2220,6 +2220,16 @@ footer .footer-links li a:hover:before {
 
 .call-to-action-curved .call-to-action-curved-content {
   background-color: #fff;
+}
+
+.call-to-action-curved .call-to-action-curved-content h3 br {
+  display: none;
+}
+
+@media screen and (min-width: 576px) {
+  .call-to-action-curved .call-to-action-curved-content h3 br {
+    display: block;
+  }
 }
 
 /****** Navbar nav ******/
@@ -4277,4 +4287,196 @@ footer .footer-links li a:hover:before {
 }
 
 /***** SMM *****/
+.progressbar, .progressbar-i, .progressbar-l {
+  list-style: none;
+  counter-reset: step;
+}
+
+.progressbar li, .progressbar-i li, .progressbar-l li {
+  float: left;
+  width: calc(100% / 7);
+  position: relative;
+  text-align: center;
+}
+
+.progressbar li::before, .progressbar-i li::before, .progressbar-l li::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: block;
+  margin: 0 auto 10px auto;
+  border-radius: 50%;
+  line-height: 27px;
+  background: #e14917;
+  text-align: center;
+  font-weight: bold;
+}
+
+.progressbar li::after, .progressbar-i li::after, .progressbar-l li::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #838383;
+  top: 5px;
+  left: -50%;
+  z-index: -1;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+.progressbar li:first-child::after, .progressbar-i li:first-child::after, .progressbar-l li:first-child::after {
+  content: none;
+}
+
+.progressbar li a, .progressbar-i li a, .progressbar-l li a {
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+  text-decoration: none;
+  color: #78787e;
+  font-family: 'Moderat';
+  font-style: normal;
+  font-weight: normal;
+}
+
+.progressbar li a, .progressbar-i li a, .progressbar-l li a {
+  font-size: 12px;
+}
+
+@media screen and (min-width: 320px) {
+  .progressbar li a, .progressbar-i li a, .progressbar-l li a {
+    font-size: calc(12px + 2 * ((100vw - 320px) / 880));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .progressbar li a, .progressbar-i li a, .progressbar-l li a {
+    font-size: 14px;
+  }
+}
+
+.progressbar li a:hover, .progressbar-i li a:hover, .progressbar-l li a:hover {
+  color: #e14917;
+  font-family: 'ModeratB';
+  font-weight: bold;
+  font-style: normal;
+}
+
+.progressbar li.active a, .progressbar-i li.active a, .progressbar-l li.active a {
+  color: #e14917;
+  font-family: 'ModeratB';
+  font-weight: bold;
+  font-style: normal;
+}
+
+.progressbar li.active + li:after, .progressbar-i li.active + li:after, .progressbar-l li.active + li:after {
+  -webkit-box-shadow: 0px 3px 7px #e14917;
+          box-shadow: 0px 3px 7px #e14917;
+}
+
+.sma-offered {
+  list-style-type: circle;
+}
+
+.sma-offered li {
+  color: #e14917;
+  font-family: 'ModeratB';
+  font-weight: bold;
+  font-style: normal;
+  margin-bottom: .5rem;
+}
+
+.sma-offered li {
+  font-size: 15px;
+}
+
+@media screen and (min-width: 320px) {
+  .sma-offered li {
+    font-size: calc(15px + 1 * ((100vw - 320px) / 880));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .sma-offered li {
+    font-size: 16px;
+  }
+}
+
+.close-platform {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+  color: #78787e;
+}
+
+.close-platform svg {
+  width: 100%;
+  height: 100%;
+  color: #78787e;
+}
+
+.close-platform:hover {
+  color: #f31013;
+}
+
+.close-platform:hover svg {
+  color: #f32013;
+}
+
+.platform-box {
+  -webkit-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.16);
+}
+
+.platform-box * {
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+.platform-box .btn {
+  color: #78787e;
+}
+
+.platform-box .btn svg {
+  width: 20px;
+  height: 20px;
+  color: #e14917;
+}
+
+.platform-box:not(.active) .dtl {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  opacity: 0;
+}
+
+.platform-box.active {
+  -webkit-box-shadow: 0px 11px 79px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 11px 79px rgba(0, 0, 0, 0.16);
+}
+
+.platform-box.active .hide-on-active {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  opacity: 0;
+}
+
+.bottom-case-study--box.brp {
+  background-image: url(../images/banner-6-brooklyn-pool-spa.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 /*# sourceMappingURL=main.css.map */

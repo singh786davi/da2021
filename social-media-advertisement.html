@@ -13,6 +13,18 @@
     <title>Web Design | Digital Accord</title>
   </head>
   <body>
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-body">
+                <button type="button" class="btn-close d-block ms-auto mb-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                  <div>
+                      <iframe width="100%" height="350" src=""></iframe>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
     <div class="megamenu visuallyhidden" id="services">
       <div class="container">
         <div class="row">
@@ -430,17 +442,17 @@
           </div>
         </div>        
     </section>
-    <section class="call-to-action-curved mt-5">
+    <section class="call-to-action-curved mt-4 mt-md-5">
       <section class="cta-curved-thumb-part">
         <img src="images/pexels-fauxels-3182746-2.jpg" class="img-fluid" />
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 138.7" class="uk-svg uk-preserve"><path d="M0 131.7c49.3 3.2 125.2 5.2 217-5 88.5-9.8 144.9-25.8 259-52 27-6.2 188.9-43.4 283-59 0 0 378.4-62.7 822 63 19.3 5.5 80.7 23.6 166 37 71.5 11.3 131.6 14.8 173 16v7H0v-7z" fill="#fff"></path></svg>
       </section>      
-      <section class="call-to-action-curved-content pt-3 pb-3">
+      <section class="call-to-action-curved-content pt-md-0 pb-md-0 pt-3 pb-3">
         <div class="container">
           <div class="row">
             <div class="col-md-12 text-center">
-              <h4 class="h4 carbon-color bold-font mb-3">What are you waiting for?</h4>
-              <h3 class="h3 da-orange-color bold-font mb-5">Dont' wait for customers to come to you!<br/>
+              <h4 class="h4 carbon-color bold-font mb-3 show-on-scroll">What are you waiting for?</h4>
+              <h3 class="h3 da-orange-color bold-font mb-4 mb-md-5 show-on-scroll">Dont' wait for customers to come to you!<br/>
                 <span class="text-capitalize">Be visible to them each day</span>           
               </h3>
               <a href="#" class="btn da-btn text-uppercase show-on-scroll">
@@ -454,100 +466,196 @@
       <svg viewBox="0 0 500 60" preserveAspectRatio="none">
         <defs>
           <clipPath id="shape">
-            <path d="M0,0 Q250,70 500,0 Z" filter="url(#dropshadow)"></path>
+            <path d="M0,0 Q250,40 500,0 Z" filter="url(#dropshadow)"></path>
           </clipPath>
           <filter id="dropshadow" x="-2" y="-2" width="200" height="200">
             <feGaussianBlur stdDeviation="1"></feGaussianBlur>
           </filter>
         </defs>
-        <rect x="0" y="0" width="500" height="120" fill="#fff" clip-path="url(#shape)"></rect>
+        <rect x="0" y="0" width="500" height="60" fill="#fff" clip-path="url(#shape)"></rect>
       </svg>
     </section>
-    <section class="sm-platform-we-work-with mt-md-5 mb-4">
-        <div class="section-waves topone">
-            <svg class="graywave show-on-scroll" xmlns="http://www.w3.org/2000/svg" width="842.097" height="68.874" viewBox="0 0 842.097 68.874"><path d="M566.512,1816.93c90.41,87.641,233.864-108.711,324.869-7.227s154.1-85.845,250.827-21.343,147.793,50.239,262.322,2.95" transform="translate(-564.391 -1773.086)" fill="none" stroke="#9a9999" stroke-linecap="round" stroke-width="3" opacity="0.349"/></svg>
-            <svg class="orangewave show-on-scroll" xmlns="http://www.w3.org/2000/svg" width="587.192" height="48.839" viewBox="0 0 587.192 48.839"><path d="M758.735,1796.055c62.909-60.983,162.728,75.643,226.051,5.029s107.224,59.733,174.53,14.851,102.839-34.957,182.53-2.052" transform="translate(-756.614 -1778.181)" fill="none" stroke="#e14917" stroke-linecap="round" stroke-width="3" opacity="0.659"/></svg>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 offset-md-2">
-                    <div class="platform-box">
-                        <h3 class="mb-5 text-center show-on-scroll">Social media platforms we work with</h3>
-                        <div class="row text-center mt-5">
-                            <div class="col-lg-3 col-md-6 mb-4">
-                                <img src="images/svgs/facebook.svg" class="img-fluid mx-auto show-on-scroll" />
-                                <h5 class="mt-4 show-on-scroll">Facebook</h5>
-                            </div>
-                            <div class="col-lg-3 col-md-6 mb-4">
-                                <span class="show-on-scroll iconify" data-icon="mdi:google-my-business" data-inline="false"></span>
-                                <h5 class="mt-4 show-on-scroll">Google My Business</h5>
-                            </div>
-                            <div class="col-lg-3 col-md-6 mb-4">
-                                <img src="images/svgs/instagram.svg" class="show-on-scroll img-fluid mx-auto" />
-                                <h5 class="mt-4 show-on-scroll">Instagram</h5>
-                            </div>
-                            <div class="col-lg-3 col-md-6 mb-4">
-                                <img src="images/svgs/linkedin.svg" class="show-on-scroll img-fluid mx-auto" />
-                                <h5 class="mt-4 show-on-scroll">Linkedin</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="section-waves bottomone">
-            <svg class="graywave show-on-scroll" xmlns="http://www.w3.org/2000/svg" width="842.097" height="68.874" viewBox="0 0 842.097 68.874"><path d="M566.512,1816.93c90.41,87.641,233.864-108.711,324.869-7.227s154.1-85.845,250.827-21.343,147.793,50.239,262.322,2.95" transform="translate(-564.391 -1773.086)" fill="none" stroke="#9a9999" stroke-linecap="round" stroke-width="3" opacity="0.349"/></svg>
-            <svg class="orangewave show-on-scroll" xmlns="http://www.w3.org/2000/svg" width="587.192" height="48.839" viewBox="0 0 587.192 48.839"><path d="M758.735,1796.055c62.909-60.983,162.728,75.643,226.051,5.029s107.224,59.733,174.53,14.851,102.839-34.957,182.53-2.052" transform="translate(-756.614 -1778.181)" fill="none" stroke="#e14917" stroke-linecap="round" stroke-width="3" opacity="0.659"/></svg>
-        </div>
-    </section>
-    <section class="unlock-the-potential smm candybg">
-      <div class="section-waves">
-        <svg class="graywave show-on-scroll is-visible" xmlns="http://www.w3.org/2000/svg" width="60%" height="48.839" viewBox="0 0 842.097 68.874"><path d="M566.512,1816.93c90.41,87.641,233.864-108.711,324.869-7.227s154.1-85.845,250.827-21.343,147.793,50.239,262.322,2.95" transform="translate(-564.391 -1773.086)" fill="none" stroke="#9a9999" stroke-linecap="round" stroke-width="3" opacity="0.349"></path></svg>
-        <svg class="orangewave show-on-scroll is-visible" xmlns="http://www.w3.org/2000/svg" width="60%" height="42" viewBox="0 0 587.192 48.839"><path d="M758.735,1796.055c62.909-60.983,162.728,75.643,226.051,5.029s107.224,59.733,174.53,14.851,102.839-34.957,182.53-2.052" transform="translate(-756.614 -1778.181)" fill="none" stroke="#e14917" stroke-linecap="round" stroke-width="3" opacity="0.659"></path></svg>
-    </div>
+  <section class="sm-platform-we-work-with mb-4">
+      <div class="section-waves topone">
+          <svg class="graywave show-on-scroll" xmlns="http://www.w3.org/2000/svg" width="842.097" height="68.874" viewBox="0 0 842.097 68.874"><path d="M566.512,1816.93c90.41,87.641,233.864-108.711,324.869-7.227s154.1-85.845,250.827-21.343,147.793,50.239,262.322,2.95" transform="translate(-564.391 -1773.086)" fill="none" stroke="#9a9999" stroke-linecap="round" stroke-width="3" opacity="0.349"/></svg>
+          <svg class="orangewave show-on-scroll" xmlns="http://www.w3.org/2000/svg" width="587.192" height="48.839" viewBox="0 0 587.192 48.839"><path d="M758.735,1796.055c62.909-60.983,162.728,75.643,226.051,5.029s107.224,59.733,174.53,14.851,102.839-34.957,182.53-2.052" transform="translate(-756.614 -1778.181)" fill="none" stroke="#e14917" stroke-linecap="round" stroke-width="3" opacity="0.659"/></svg>
+      </div>
       <div class="container">
-          <div class="row align-items-center">
-              <div class="col-md-7 mb-5 text-center text-md-start marginforshape">
-                  <h3 class="mb-4 show-on-scroll h2 bold-font carbon-color">What we do</h3>
-                  <p class="show-on-scroll mb-4 left-orange-strip">Are you struggling to find the time to post to your social media accounts and engage with your followers? Coming up with content and planning posts in advance can be super tiring, especially if you are putting the time into running your business! It is important to connect to new customers and strengthen relationships with existing ones through a constant flow of creative and meaningful content.<br>
-                  <br>We understand that not every social media platform is suited to your business, this is why we tailor our plans to allow you to choose what platforms  you would like us to work with. Whether that be, setting up new accounts or concentrating on existing profiles.</p>
+          <div class="row">
+              <div class="col-lg-8 offset-md-2">
+                  <div class="platform-box position-relative text-center mt-0">
+                      <a href="#" class="close-platform dtl hide-dtl">
+                        <span class="iconify" data-icon="codicon:chrome-close" data-inline="false"></span>
+                      </a>
+                      <h3 class="mb-5 h3 carbon-color text-center dtl show-on-scroll">Facebook advertising</h3>
+                      <p class="dtl show-on-scroll">Whatever your advertising goal, Facebook has a wide range of formatting and campaign styles to ensure your business is displayed and targeted effectively. Digital Accord have a team of specialists that develop the correct strategy around your personal business goals, with  the ability to target ads right down to job roles, relationships, life interests and much more. Ensuring your business never goes unnoticed! </p>
+                      <img src="images/svgs/facebook.svg" class="show-on-scroll shrt img-fluid mt-4 mb-4 ml-auto mr-auto show-on-scroll" />
+                      <p class="hide-on-active show-on-scroll">Whatever your advertising goal, Facebook has a wide range of formatting and campaign styles to ensure your business is displayed and targeted effectively. Digital Accord have a team of specialists that develop the correct strategy around your personal business goals, with  the ability to target ads right down to job roles, relationships, life interests and much more. Ensuring your business never goes unnoticed! </p>
+                      <h4 class="h4 bold-font text-center carbon-color mb-4 dtl show-on-scroll">Depending on your goals and business we can set up
+                        campaigns to drive the following outcomes:</h4>
+                        <div class="row dtl show-on-scroll">
+                          <div class="col mt-4 d-none d-md-block">
+                            <ul class="progressbar ps-0">
+                              <li><a href="#">Lead<br>Generation</a></li>
+                              <li><a href="#">Messages<br>(automation)</a></li>
+                              <li><a href="#">Traffic Building &<br>Brand Awareness</a></li>
+                              <li><a href="#">Catalog<br>Sales</a></li>
+                              <li><a href="#">Store<br>Visitors</a></li>
+                              <li><a href="#">App<br>Installs</a></li>
+                              <li><a href="#">Video<br>Views</a></li>
+                            </ul>
+                          </div>
+                          <div class="col d-md-none">
+                            <ul class="sma-offered ps-0 text-start">
+                              <li>Lead Generation</li>
+                              <li>Messages (automation)</li>
+                              <li>Traffic Building & Brand Awareness</li>
+                              <li>Catalog Sales</li>
+                              <li>Store Visitors</li>
+                              <li>App Installs</li>
+                              <li>Video Views</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-4 offset-md-4">
+                            <a href="#" class="show-dtl btn btn-default btn-da-w mt-4 ms-auto me-auto show-on-scroll hide-on-active">
+                              <span>Read more</span>
+                              <span class="iconify" data-icon="bi:chevron-right" data-inline="false"></span>
+                            </a>
+                          </div>
+                        </div>
+                  </div>
               </div>
           </div>
-          <div class="row">
-            <div class="col-md-8 offset-md-4">
-              <h3 class="h3 da-orange-color show-on-scroll bold-font mb-4 text-center text-capitalize">So what do you get?</h3>
-              <div class="row mt-5">
-                <div class="col-md-6 mb-4">
-                  <div class="da-pill match-height show-on-scroll">
-                    <h6 class="text-capitalize text-center bold-font carbon-color h6 mb-0">Dedicated social media manager</h6>
-                  </div>
+          
+      </div>
+      <div class="section-waves bottomone">
+          <svg class="graywave show-on-scroll" xmlns="http://www.w3.org/2000/svg" width="842.097" height="68.874" viewBox="0 0 842.097 68.874"><path d="M566.512,1816.93c90.41,87.641,233.864-108.711,324.869-7.227s154.1-85.845,250.827-21.343,147.793,50.239,262.322,2.95" transform="translate(-564.391 -1773.086)" fill="none" stroke="#9a9999" stroke-linecap="round" stroke-width="3" opacity="0.349"/></svg>
+          <svg class="orangewave show-on-scroll" xmlns="http://www.w3.org/2000/svg" width="587.192" height="48.839" viewBox="0 0 587.192 48.839"><path d="M758.735,1796.055c62.909-60.983,162.728,75.643,226.051,5.029s107.224,59.733,174.53,14.851,102.839-34.957,182.53-2.052" transform="translate(-756.614 -1778.181)" fill="none" stroke="#e14917" stroke-linecap="round" stroke-width="3" opacity="0.659"/></svg>
+      </div>
+  </section>
+  <section class="sm-platform-we-work-with mb-4">
+    <div class="section-waves topone">
+        <svg class="graywave show-on-scroll" xmlns="http://www.w3.org/2000/svg" width="842.097" height="68.874" viewBox="0 0 842.097 68.874"><path d="M566.512,1816.93c90.41,87.641,233.864-108.711,324.869-7.227s154.1-85.845,250.827-21.343,147.793,50.239,262.322,2.95" transform="translate(-564.391 -1773.086)" fill="none" stroke="#9a9999" stroke-linecap="round" stroke-width="3" opacity="0.349"/></svg>
+        <svg class="orangewave show-on-scroll" xmlns="http://www.w3.org/2000/svg" width="587.192" height="48.839" viewBox="0 0 587.192 48.839"><path d="M758.735,1796.055c62.909-60.983,162.728,75.643,226.051,5.029s107.224,59.733,174.53,14.851,102.839-34.957,182.53-2.052" transform="translate(-756.614 -1778.181)" fill="none" stroke="#e14917" stroke-linecap="round" stroke-width="3" opacity="0.659"/></svg>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-md-2">
+                <div class="platform-box position-relative text-center mt-0">
+                    <a href="#" class="close-platform dtl hide-dtl">
+                      <span class="iconify" data-icon="codicon:chrome-close" data-inline="false"></span>
+                    </a>
+                    <h3 class="mb-5 h3 carbon-color text-center dtl show-on-scroll">Instagram advertising</h3>
+                    <p class="dtl show-on-scroll">Advertising on LinkedIn allows you to reach your ideal customer through a professional network. you are a B2B industry... </p>
+                    <img src="images/svgs/instagram.svg" class="shrt img-fluid mt-4 mb-4 ml-auto mr-auto show-on-scroll" />
+                    <p class="hide-on-active show-on-scroll">Advertising on LinkedIn allows you to reach your ideal customer through a professional network. you are a B2B industry... </p>
+                    <h4 class="h4 bold-font text-center carbon-color mb-4 dtl show-on-scroll">Depending on your goals and business we can set up
+                      campaigns to drive the following outcomes:</h4>
+                      <div class="row dtl show-on-scroll">
+                        <div class="col mt-4 d-none d-md-block">
+                          <ul class="progressbar-i ps-0">
+                            <li><a href="#">Lead<br>Generation</a></li>
+                            <li><a href="#">Messages<br>(automation)</a></li>
+                            <li><a href="#">Traffic Building &<br>Brand Awareness</a></li>
+                            <li><a href="#">Catalog<br>Sales</a></li>
+                            <li><a href="#">Store<br>Visitors</a></li>
+                            <li><a href="#">App<br>Installs</a></li>
+                            <li><a href="#">Video<br>Views</a></li>
+                          </ul>
+                        </div>
+                        <div class="col d-md-none">
+                          <ul class="sma-offered ps-0 text-start">
+                            <li>Lead Generation</li>
+                            <li>Messages (automation)</li>
+                            <li>Traffic Building & Brand Awareness</li>
+                            <li>Catalog Sales</li>
+                            <li>Store Visitors</li>
+                            <li>App Installs</li>
+                            <li>Video Views</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-4 offset-md-4">
+                          <a href="#" class="show-dtl btn btn-default btn-da-w mt-4 ms-auto me-auto show-on-scroll hide-on-active">
+                            <span>Read more</span>
+                            <span class="iconify" data-icon="bi:chevron-right" data-inline="false"></span>
+                          </a>
+                        </div>
+                      </div>
                 </div>
-                <div class="col-md-6 mb-4">
-                  <div class="da-pill match-height show-on-scroll">
-                    <h6 class="text-capitalize text-center bold-font carbon-color h6 mb-0">Social Media Content Creation</h6>
-                  </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                  <div class="da-pill match-height show-on-scroll">
-                    <h6 class="text-capitalize text-center bold-font carbon-color h6 mb-0">Month to Month Contract</h6>
-                  </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                  <div class="da-pill match-height show-on-scroll">
-                    <h6 class="text-capitalize text-center bold-font carbon-color h6 mb-0">Social Media Scheduling</h6>
-                  </div>
-                </div>
-                <div class="col-md-6 offset-md-3 mb-4">
-                  <div class="da-pill match-height show-on-scroll">
-                    <h6 class="text-capitalize text-center bold-font carbon-color h6 mb-0">Publishing and Analysing</h6>
-                  </div>
-                </div>
-              </div>
             </div>
+        </div>
+        
+    </div>
+    <div class="section-waves bottomone">
+        <svg class="graywave show-on-scroll" xmlns="http://www.w3.org/2000/svg" width="842.097" height="68.874" viewBox="0 0 842.097 68.874"><path d="M566.512,1816.93c90.41,87.641,233.864-108.711,324.869-7.227s154.1-85.845,250.827-21.343,147.793,50.239,262.322,2.95" transform="translate(-564.391 -1773.086)" fill="none" stroke="#9a9999" stroke-linecap="round" stroke-width="3" opacity="0.349"/></svg>
+        <svg class="orangewave show-on-scroll" xmlns="http://www.w3.org/2000/svg" width="587.192" height="48.839" viewBox="0 0 587.192 48.839"><path d="M758.735,1796.055c62.909-60.983,162.728,75.643,226.051,5.029s107.224,59.733,174.53,14.851,102.839-34.957,182.53-2.052" transform="translate(-756.614 -1778.181)" fill="none" stroke="#e14917" stroke-linecap="round" stroke-width="3" opacity="0.659"/></svg>
+    </div>
+</section>
+<section class="sm-platform-we-work-with mb-4">
+  <div class="section-waves topone">
+      <svg class="graywave show-on-scroll" xmlns="http://www.w3.org/2000/svg" width="842.097" height="68.874" viewBox="0 0 842.097 68.874"><path d="M566.512,1816.93c90.41,87.641,233.864-108.711,324.869-7.227s154.1-85.845,250.827-21.343,147.793,50.239,262.322,2.95" transform="translate(-564.391 -1773.086)" fill="none" stroke="#9a9999" stroke-linecap="round" stroke-width="3" opacity="0.349"/></svg>
+      <svg class="orangewave show-on-scroll" xmlns="http://www.w3.org/2000/svg" width="587.192" height="48.839" viewBox="0 0 587.192 48.839"><path d="M758.735,1796.055c62.909-60.983,162.728,75.643,226.051,5.029s107.224,59.733,174.53,14.851,102.839-34.957,182.53-2.052" transform="translate(-756.614 -1778.181)" fill="none" stroke="#e14917" stroke-linecap="round" stroke-width="3" opacity="0.659"/></svg>
+  </div>
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-8 offset-md-2">
+              <div class="platform-box position-relative text-center mt-0">
+                  <a href="#" class="close-platform dtl hide-dtl">
+                    <span class="iconify" data-icon="codicon:chrome-close" data-inline="false"></span>
+                  </a>
+                  <h3 class="mb-5 h3 carbon-color text-center dtl show-on-scroll">Linkedin advertising</h3>
+                  <p class="dtl show-on-scroll">Advertising on LinkedIn allows you to reach your ideal customer through a professional network. you are a B2B industry... </p>
+                  <img src="images/svgs/linkedin.svg" class="shrt img-fluid mt-4 mb-4 ml-auto mr-auto show-on-scroll" />
+                  <p class="hide-on-active show-on-scroll">Advertising on LinkedIn allows you to reach your ideal customer through a professional network. you are a B2B industry... </p>
+                  <h4 class="h4 bold-font text-center carbon-color mb-4 dtl show-on-scroll">Depending on your goals and business we can set up
+                    campaigns to drive the following outcomes:</h4>
+                    <div class="row dtl show-on-scroll">
+                      <div class="col mt-4 d-none d-md-block">
+                        <ul class="progressbar-l ps-0">
+                          <li><a href="#">Lead<br>Generation</a></li>
+                          <li><a href="#">Messages<br>(automation)</a></li>
+                          <li><a href="#">Traffic Building &<br>Brand Awareness</a></li>
+                          <li><a href="#">Catalog<br>Sales</a></li>
+                          <li><a href="#">Store<br>Visitors</a></li>
+                          <li><a href="#">App<br>Installs</a></li>
+                          <li><a href="#">Video<br>Views</a></li>
+                        </ul>
+                      </div>
+                      <div class="col d-md-none">
+                        <ul class="sma-offered ps-0 text-start">
+                          <li>Lead Generation</li>
+                          <li>Messages (automation)</li>
+                          <li>Traffic Building & Brand Awareness</li>
+                          <li>Catalog Sales</li>
+                          <li>Store Visitors</li>
+                          <li>App Installs</li>
+                          <li>Video Views</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-4 offset-md-4">
+                        <a href="#" class="show-dtl btn btn-default btn-da-w mt-4 ms-auto me-auto show-on-scroll hide-on-active">
+                          <span>Read more</span>
+                          <span class="iconify" data-icon="bi:chevron-right" data-inline="false"></span>
+                        </a>
+                      </div>
+                    </div>
+              </div>
           </div>
       </div>
-  </section>  
-  <section class="bottom-case-study--box">
+      
+  </div>
+  <div class="section-waves bottomone">
+      <svg class="graywave show-on-scroll" xmlns="http://www.w3.org/2000/svg" width="842.097" height="68.874" viewBox="0 0 842.097 68.874"><path d="M566.512,1816.93c90.41,87.641,233.864-108.711,324.869-7.227s154.1-85.845,250.827-21.343,147.793,50.239,262.322,2.95" transform="translate(-564.391 -1773.086)" fill="none" stroke="#9a9999" stroke-linecap="round" stroke-width="3" opacity="0.349"/></svg>
+      <svg class="orangewave show-on-scroll" xmlns="http://www.w3.org/2000/svg" width="587.192" height="48.839" viewBox="0 0 587.192 48.839"><path d="M758.735,1796.055c62.909-60.983,162.728,75.643,226.051,5.029s107.224,59.733,174.53,14.851,102.839-34.957,182.53-2.052" transform="translate(-756.614 -1778.181)" fill="none" stroke="#e14917" stroke-linecap="round" stroke-width="3" opacity="0.659"/></svg>
+  </div>
+</section>
+  <section class="bottom-case-study--box brp">
     <svg  viewBox="0 0 500 60" preserveAspectRatio="none" class="topshapesvg">
       <defs>
         <clipPath id="shape">
@@ -559,21 +667,21 @@
       </defs>
       <rect x="0" y="0" width="500" height="120" fill="#f8f8f8" clip-path="url(#shape)"></rect>
     </svg>
-    <img src="images/KATO-MK2-G_1728x700.png" class="img-fluid mx-auto invisible" />
+    <img src="images/banner-6-brooklyn-pool-spa.jpg" class="img-fluid mx-auto invisible" />
     <div class="maincsbox">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
             <div class="maincsbox-b">
               <div class="action-box show-on-scroll">
-                <a href="#">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#videoModal" data-theVideo="https://www.youtube.com/watch/embed/3bfMQrKwAQU">
                   <div class="row align-items-center">
                     <div class="col-3 text-center order-2">
                       <img src="images/svgs/video-play-orange.svg" class="img-fluid mx-auto" />
                     </div>
                     <div class="col-9 order-1">
                       <h6 class="bold-font da-orange-color text-uppercase">Case study</h6>
-                      <h4 class="bold-font carbon-color text-uppercase mb-0">GW Homes</h4>
+                      <h4 class="bold-font carbon-color text-uppercase mb-0">Barrier Reef Pools</h4>
                     </div>                    
                   </div>
                 </a>                
@@ -668,7 +776,114 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
       <script type="text/javascript">
         $(document).ready(function(){
+          // alert("hello");
+          $(".progressbar li:first-child").addClass("active");
+
+          // define a function...
+          function triggerstep() {
+
+            $(".progressbar li").each(function(){
+              currentItem = $(this);
+              if(currentItem.next().length)
+              {
+                nextItem = currentItem.next();
+                if(!nextItem.hasClass("active")){
+                  nextItem.addClass("active");
+                  return false;
+                }
+              }
+              else
+              {
+                $(".progressbar li").removeClass("active");
+                $(".progressbar li:first-child").addClass("active");
+                console.log("no next found");
+              }
+            });
+          }
+
+          // ...repeat it once every second
+          window.setInterval(triggerstep, 1500);
+
            // alert("hello");
+           $(".progressbar-i li:first-child").addClass("active");
+
+          // define a function...
+          function triggerstepi() {
+
+            $(".progressbar-i li").each(function(){
+              currentItem = $(this);
+              if(currentItem.next().length)
+              {
+                nextItem = currentItem.next();
+                if(!nextItem.hasClass("active")){
+                  nextItem.addClass("active");
+                  return false;
+                }
+              }
+              else
+              {
+                $(".progressbar-i li").removeClass("active");
+                $(".progressbar-i li:first-child").addClass("active");
+                console.log("no next found");
+              }
+            });
+          }
+
+          // ...repeat it once every second
+          window.setInterval(triggerstepi, 1500);
+
+
+          // alert("hello");
+          $(".progressbar-l li:first-child").addClass("active");
+
+          // define a function...
+          function triggerstepl() {
+
+            $(".progressbar-l li").each(function(){
+              currentItem = $(this);
+              if(currentItem.next().length)
+              {
+                nextItem = currentItem.next();
+                if(!nextItem.hasClass("active")){
+                  nextItem.addClass("active");
+                  return false;
+                }
+              }
+              else
+              {
+                $(".progressbar-l li").removeClass("active");
+                $(".progressbar-l li:first-child").addClass("active");
+                console.log("no next found");
+              }
+            });
+          }
+
+          // ...repeat it once every second
+          window.setInterval(triggerstepl, 1500);
+
+          $('.show-dtl').click(function(e){
+            e.preventDefault();
+            $(this).closest('.platform-box').addClass('active');
+            scrollTo($(this).closest('.platform-box'));
+          });
+
+          $(document).on('click','.hide-dtl',function(e){
+            e.preventDefault();
+            $(this).closest('.platform-box').removeClass('active');
+            scrollTo($(this).closest('.platform-box'));
+          });
+
+          function scrollTo(elm)
+          {
+            if(elm.offset.top > 10)
+            {
+              console.log(elm.offset.top);
+              $('html, body').animate({
+                  scrollTop: $(elm).offset().top
+              }, 2000);
+            }
+            
+          }
         });
       </script>
       <script type="text/javascript">
@@ -768,7 +983,45 @@
               window.setTimeout( callback, 1000 / 60 )
           }
 
-         
+        //FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
+        function autoPlayYouTubeModal() {
+            var trigger = $("body").find('[data-bs-toggle="modal"]');
+            trigger.click(function () {
+              alert("hello");
+                var theModal = $(this).data("bs-target"),
+                    videoSRC = $(this).attr("data-theVideo"),
+                    videoSRCauto = videoSRC + "?autoplay=1";
+                $(theModal + ' iframe').attr('src', videoSRCauto);
+                $(theModal + ' button.close').click(function () {
+                    $(theModal + ' iframe').attr('src', videoSRC);
+                });
+            });
+
+          
+
+        }
+
+        var videoModel = document.getElementById('videoModal')
+          videoModel.addEventListener('show.bs.modal', function (event) {
+            // Button that triggered the modal
+            var button = event.relatedTarget
+            // Extract info from data-bs-* attributes
+            var videourl = button.getAttribute('data-thevideo')
+            var videoautosrc = videourl + "?autoplay=1";
+
+            //var modelelm = button.getAttribute("data-bs-target");
+            videoModel.querySelector('iframe').setAttribute('src',videoautosrc);
+
+            
+            
+          });
+
+          videoModel.addEventListener('hidden.bs.modal', function (event) {
+            videoModel.querySelector('iframe').setAttribute('src','');
+          });
+
+
+          
     
       </script>
     </body>
