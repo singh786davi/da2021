@@ -9,7 +9,10 @@
 .unlock-the-potential{
     &.wi{
         padding-bottom: 60px;
-    }
+        #Layer_1{
+            bottom: -40px
+        }
+    }    
 }
 .wi-services{
     h4{
@@ -20,21 +23,37 @@
 .wi-why-choose-us{
     position: relative;
     background-color: #fff;
-    padding-top: 45px;
-    h2{
+    padding-top: 0px;
+    &:before{
+        background-color: #fff;
         position: absolute;
-        width: 100%;
+        top:0;
         left: 0;
-        top: -70px;
-        @include boldfont();
-        @include fluid-type($min_width,$max_width,28px,35px);
-        color: $carbon_color;
-        @media screen and (min-width: 576px){
-            top: -110px;
+        height: 100%;
+        width: 100%;
+        z-index: 3;
+        content: "";
+    }
+    &.wi {
+        .container{
+            position: relative;
+            z-index: 4;
         }
-        @media screen and (min-width: 992px){
-            top: -40%;
-        }
+    }
+    h2{
+        // position: absolute;
+        // width: 100%;
+        // left: 0;
+        // top: -70px;
+        // @include boldfont();
+        // @include fluid-type($min_width,$max_width,28px,35px);
+        // color: $carbon_color;
+        // @media screen and (min-width: 576px){
+        //     top: -110px;
+        // }
+        // @media screen and (min-width: 992px){
+        //     top: -40%;
+        // }
 
     }
     .whybox{
@@ -75,16 +94,8 @@
             border-radius: 75px;
             @media screen and (min-width: 992px)
             {
-                height: 125%;
-                top: -40%;
-            }
-            @media screen and (min-width: 1300px) {
-                height: 150%;
-                top: -50%;                                
-            }
-            @media screen and (min-width: 1560px) {
-                height: 160%;
-                top: -60%;                                
+                height: calc(100% + 100px);
+                top: -100px;
             }
         }
         h3{

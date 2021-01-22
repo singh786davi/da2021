@@ -3634,6 +3634,10 @@ footer .footer-links li a:hover:before {
   padding-bottom: 60px;
 }
 
+.unlock-the-potential.wi #Layer_1 {
+  bottom: -40px;
+}
+
 .wi-services h4 {
   font-family: 'ModeratB';
   font-weight: bold;
@@ -3659,46 +3663,23 @@ footer .footer-links li a:hover:before {
 .wi-why-choose-us {
   position: relative;
   background-color: #fff;
-  padding-top: 45px;
+  padding-top: 0px;
 }
 
-.wi-why-choose-us h2 {
+.wi-why-choose-us:before {
+  background-color: #fff;
   position: absolute;
-  width: 100%;
+  top: 0;
   left: 0;
-  top: -70px;
-  font-family: 'ModeratB';
-  font-weight: bold;
-  font-style: normal;
-  color: #312e2e;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  content: "";
 }
 
-.wi-why-choose-us h2 {
-  font-size: 28px;
-}
-
-@media screen and (min-width: 320px) {
-  .wi-why-choose-us h2 {
-    font-size: calc(28px + 7 * ((100vw - 320px) / 880));
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .wi-why-choose-us h2 {
-    font-size: 35px;
-  }
-}
-
-@media screen and (min-width: 576px) {
-  .wi-why-choose-us h2 {
-    top: -110px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .wi-why-choose-us h2 {
-    top: -40%;
-  }
+.wi-why-choose-us.wi .container {
+  position: relative;
+  z-index: 4;
 }
 
 .wi-why-choose-us .whybox h3 {
@@ -3760,22 +3741,8 @@ footer .footer-links li a:hover:before {
 
 @media screen and (min-width: 992px) {
   .wi-hosting-plans .planbox:before {
-    height: 125%;
-    top: -40%;
-  }
-}
-
-@media screen and (min-width: 1300px) {
-  .wi-hosting-plans .planbox:before {
-    height: 150%;
-    top: -50%;
-  }
-}
-
-@media screen and (min-width: 1560px) {
-  .wi-hosting-plans .planbox:before {
-    height: 160%;
-    top: -60%;
+    height: calc(100% + 100px);
+    top: -100px;
   }
 }
 
